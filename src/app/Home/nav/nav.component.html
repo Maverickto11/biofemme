@@ -1,0 +1,104 @@
+<div class="bg-pink-400 p-2 flex justify-between items-center text-white">
+  <div class="flex space-x-5 ml-20">
+      <a href="#"><img src="assets/img/facebook.png" alt="facebook" class="w-5 h-5"></a>
+      <a href="#"><img src="assets/img/instagram.png" alt="Instagram" class="w-5 h-5"></a>
+      <a href="#"><img src="assets/img/tik-tok.png" alt="TikTok" class="w-5  h-5"></a>
+    
+  </div>
+
+  <div class="flex space-x-8 mr-20">
+    <a href="#" class="flex items-center"><i class="fas fa-user-circle mr-1"></i> Mi Cuenta</a>
+    <a href="#" class="flex items-center"><i class="fas fa-store mr-1"></i> Puntos de Venta</a>
+  </div>
+</div>
+
+<!-- Barra de navegación principal -->
+<nav class="bg-white py-4 shadow-md">
+  <div class="container mx-auto flex justify-between items-center">
+
+    <!-- Logo -->
+    <div class="flex items-center space-x-3 ml-11">
+      <img src="/assets/img/logo.png" alt="BioFemme Logo" style="background-color: #DB8993;" class="w-24 h-auto">
+    </div>
+
+    <!-- Enlaces de navegación -->
+    <div class="hidden md:flex space-x-6"
+    style="font-family: 'Nunito Sans', sans-serif; font-weight: 400; color: #DB8993; font-size: 18px; line-height: 22px;">
+    <a href="#" class="hover:text-[#37343A]">Tienda</a>
+    <div class="relative">
+        <a href="#" (mouseover)="showModal()" (mouseout)="hideModal()" class="hover:text-[#37343A] flex items-center">
+            Productos <i class="fas fa-chevron-down ml-1"></i>
+        </a>
+        <!-- Modal -->
+        <div *ngIf="isModalVisible" class="absolute  transform -translate-x-1/3 translate-x-15
+        bg-gradient-to-r from-[#E399A1] to-[#F0B5B9] 
+        text-[#FFFFFF] shadow-lg p-10 mt-12 rounded-lg z-10 w-[900px]"
+             (mouseover)="resetTimer()" (mouseout)="startHideTimer()">
+            <div class="flex justify-between">
+                <!-- Primera columna -->
+                <div class="flex-1 mx-6">
+                    <h3 class="font-bold text-lg pb-4">CATEGORÍA</h3>
+                    <ul class="space-y-4">
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">LIMPIEZA</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">HIDRATACIÓN</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">PROTECCIÓN</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">PROAGE</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ACNE CONTROL</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">SETS</li>
+                    </ul>
+                </div>
+                <!-- Segunda columna -->
+                <div class="flex-1 mx-6">
+                    <h3 class="font-bold text-lg pb-4">USOS</h3>
+                    <ul class="space-y-4">
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">MANCHAS</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">OJERAS</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ARRUGAS</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ACNÉ</li>
+                    </ul>
+                </div>
+                <!-- Tercera columna -->
+                <div class="flex-1 mx-6">
+                    <h3 class="font-bold text-lg pb-4">TIPO DE PIEL</h3>
+                    <ul class="space-y-4">
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">NORMAL</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">SECA</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">MIXTA</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">GRASA</li>
+                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">TENDENCIA ACNEICA</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="flex items-center justify-between w-full lg:w-1/3">
+      <!-- Input de búsqueda estilo YouTube -->
+      <input 
+        type="text" 
+        placeholder="¿Qué producto buscas?" 
+        class="flex-grow py-2 pl-4 text-gray-700 bg-white border border-gray-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+    
+      <!-- Botón de búsqueda con icono -->
+      <button 
+        class="flex items-center justify-center h-full bg-gray-100 border border-l-0 border-gray-300 rounded-r-full"
+        style="width: 60px; height: 44px;"
+      >
+        <img src="assets/img/busqueda.png" alt="Buscar" class="w-5 h-5">
+      </button>
+    
+      <!-- Carrito de compras -->
+      <a href="#" class="relative ml-4">
+        <!-- Imagen del carrito de compras -->
+        <img src="/assets/img/carrito-de-compras.png" alt="Carrito de compras" class="h-6 w-6">
+        
+        <!-- Círculo con número -->
+        <span class="absolute top-0 right-0 transform translate-x-6 -translate-y-0 bg-[#DB8993] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+          3 <!-- Cambia este número dinámicamente según la cantidad en el carrito -->
+        </span>
+      </a>
+    </div>
+  </div>
+</nav>

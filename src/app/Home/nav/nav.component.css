@@ -1,0 +1,19 @@
+.bg-pink-400{
+    background-color: #DB8993;
+}
+
+button{
+    background-color: #DB8993;
+}
+
+nav{
+    font-family: "Nunito Sans", sans-serif;
+}
+.flex-1{
+    margin: 25px;
+} 
+#model{
+    width: 600px;
+    height: 300px;
+}
+

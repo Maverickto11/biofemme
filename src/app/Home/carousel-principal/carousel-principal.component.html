@@ -1,0 +1,26 @@
+<div class="relative w-full max-w-lg mx-auto">
+    <div class="overflow-hidden rounded-lg shadow-lg">
+      <div
+        class="transition-transform duration-700 ease-in-out"
+      >
+        <div class="w-full flex-shrink-0">
+          <img [src]="images[currentIndex]" alt="Image" class="w-full" />
+        </div>
+      </div>
+    </div>
+    
+    <button
+      class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full"
+      (click)="prev()"
+    >
+      &lt;
+    </button>
+    
+    <button
+      class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-700 text-white p-2 rounded-full"
+      (click)="next()"
+    >
+      &gt;
+    </button>
+  </div>
+  
