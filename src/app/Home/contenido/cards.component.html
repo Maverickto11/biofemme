@@ -1,0 +1,68 @@
+<div class="bg-white" style="margin-top: 60px;">
+
+    <h2 class="tracking-tight text-center"
+        style=" font-family: 'Futura', sans-serif; font-size: 40px; line-height: 56px; font-weight: 500; color: rgb(170, 170, 170);">
+        CATEGORÍAS DE PRODUCTOS BIOFEMME
+    </h2>
+    <h3 class="tracking-tight text-center"
+        style="font-family: Futura, sans-serif; font-size: 20px; line-height: 56px; font-weight: 300; color: rgb(170, 170, 170); font-style: normal;">
+        DALE CLICK Y DESCUBRE LOS PRODUCTOS DE CADA UNA
+    </h3>
+
+    <div class="categorias-container">
+        <div class="categoria" *ngFor="let categoria of categorias">
+            <div class="imagen-container">
+                <img class="imagen" [src]="categoria.imagen" [alt]="categoria.nombre" />
+                <img class="imagen-hover" [src]="categoria.imagenHover" [alt]="categoria.nombre + ' Hover'" />
+            </div>
+            <div class="titulo">{{ categoria.nombre }}</div>
+        </div>
+    </div>
+    <div>
+        <h2 id="titulo-producto" class="tracking-tight text-center"
+            style=" font-family: 'Futura', sans-serif; font-size: 40px; line-height: 56px; margin: 30px 0; font-weight: 500; color: rgb(170, 170, 170);">
+            PRODUCTOS NUEVOS</h2>
+    </div>
+    <div class="productos-container">
+
+        <div class="producto" *ngFor="let item of productos">
+            <img [src]="item.imagen" alt="{{ item.titulo }}" class="producto-imagen" />
+            <div class="producto-info">
+                <h3 class="producto-titulo">{{ item.titulo }}</h3>
+                <h3 class="producto-titulo-sub">{{ item.tituloSub }}</h3>
+                <p class="producto-descripcion">{{ item.descripcion }}</p>   
+
+                @if (item.precioAnterior ) {
+                <del  class="producto-precio-Sub">{{ item.precioAnterior }}</del>
+                <span class="producto-precio">{{ item.precio }}</span>
+                }@else {
+                    <p class="producto-precio">{{ item.precio }}</p>
+                }
+                <button class="btn-anadir"><i class="fa fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <div class="image-container">
+            <div class="text-and-button">
+                <h2 class="text-overlay">CONOCE TODOS <br>LOS PRODUCTOS <br>BIOFEMME</h2>
+                <button class="btn-ver-mas">VER TODOS</button>
+            </div>
+            <img class="ver-productos" src="/assets/img/ver-productos-biofemme.jpg" alt="">
+        </div>
+    </div>
+    
+    <div class="text-center">
+        <div class="image-container">
+            <div class="text-and-button-piel">
+                <h2 class="text-overlay-piel">¿Conoces tu tipo de piel?</h2>
+                <p class="text-overlay-piel-p">Te ayudamos a identificarla</p>
+                <button class="btn-ver-mas-piel">COMENZAR</button>
+            </div>
+            <img class="ver-productos-piel" src="/assets/img/Categorías/banner-tablet-1024.jpg" alt="">
+        </div>
+    </div>
+    
+</div>
