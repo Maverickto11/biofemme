@@ -7,7 +7,7 @@
   </div>
 
   <div class="flex space-x-8 mr-20">
-    <a href="#" class="flex items-center"><i class="fas fa-user-circle mr-1"></i> Mi Cuenta</a>
+    <a  class="flex items-center"><i class="fas fa-user-circle mr-1"></i> Mi Cuenta</a>
     <a href="#" class="flex items-center"><i class="fas fa-store mr-1"></i> Puntos de Venta</a>
   </div>
 </div>
@@ -18,7 +18,7 @@
 
     <!-- Logo -->
     <div class="flex items-center space-x-3 ml-11">
-      <img src="/assets/img/logo.png" alt="BioFemme Logo" style="background-color: #DB8993;" class="w-24 h-auto">
+      <img [routerLink]="['/home']" src="/assets/img/logo.png" alt="BioFemme Logo" style="background-color: #DB8993;" class="w-24 h-auto">
     </div>
 
     <!-- Enlaces de navegación -->
@@ -102,3 +102,5 @@
     </div>
   </div>
 </nav>
+
+<router-outlet></router-outlet>

@@ -1,15 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
+import { RouterModule } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { ProductoComponent } from '../../producto/producto.component';
 
-@Component({
+@Component({  
   selector: 'app-cards',
   standalone: true,
-  imports: [CommonModule, FooterComponent],
+  imports: [CommonModule, FooterComponent, RouterModule, ProductoComponent],
   templateUrl: './cards.component.html',
   styleUrl: './cards.component.css'
 })
 export class CardsComponent {
+  constructor(private route: ActivatedRoute) {}
+
   categorias = [
     { nombre: 'LIMPIEZA', imagen: '/assets/img/Categorías/categoria img 1.jpg', imagenHover: '/assets/img/Categorías/categoria- img hover 1.jpg' },
     { nombre: 'HIDRATACIÓN', imagen: '/assets/img/Categorías/categoria img 2.jpg', imagenHover: '/assets/img/Categorías/categoria img hover 2.jpg' },
@@ -17,9 +22,11 @@ export class CardsComponent {
     { nombre: 'PROAGE', imagen: '/assets/img/Categorías/categoria img 4.jpg', imagenHover: '/assets/img/Categorías/categoria img hover 4.jpg' },
     { nombre: 'ACNÉ CONTROL', imagen: '/assets/img/Categorías/categoria img 5.jpg' , imagenHover: '/assets/img/Categorías/categoria img hover 5.jpg' }
   ];
+  producto: any;
 
   productos = [
     {
+      id: 1,
       imagen: '/assets/img/Producto/Producto1.jpg',
       titulo: 'LIFTING SERUM',
       tituloSub: 'Sérum Tensor',
@@ -50,4 +57,5 @@ export class CardsComponent {
     },
     // Agrega más productos según sea necesario
   ];
+
 }

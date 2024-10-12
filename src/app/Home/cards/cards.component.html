@@ -26,6 +26,8 @@
     <div class="productos-container">
 
         <div class="producto" *ngFor="let item of productos">
+            <a [routerLink]="['/producto', item.id]" class="producto-enlace">
+
             <img [src]="item.imagen" alt="{{ item.titulo }}" class="producto-imagen" />
             <div class="producto-info">
                 <h3 class="producto-titulo">{{ item.titulo }}</h3>
@@ -43,6 +45,8 @@
                     Añadir al carrito
                 </button>
             </div>
+        </a>
+
         </div>
     </div>
     <div class="text-center">
@@ -60,7 +64,7 @@
             <div class="text-and-button-piel">
                 <h2 class="text-overlay-piel">¿Conoces tu tipo de piel?</h2>
                 <p class="text-overlay-piel-p">Te ayudamos a identificarla</p>
-                <button class="btn-ver-mas-piel">COMENZAR</button>
+                <button routerLink="/producto" class="btn-ver-mas-piel">COMENZAR</button>
             </div>
             <img class="ver-productos-piel" src="/assets/img/Categorías/banner-tablet-1024.jpg" alt="">
         </div>
