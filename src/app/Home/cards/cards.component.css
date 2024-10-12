@@ -109,6 +109,7 @@
     font-size: 14px; /* Tamaño del precio */
     color: #808080; /* Color del precio */
   }
+
   .btn-anadir {
     background-color: transparent; /* Color del botón */
     color: rgb(114, 114, 114); /* Color del texto */
@@ -120,6 +121,12 @@
     display: flex; /* Flexbox para alinear el icono */
     align-items: normal; /* Centra verticalmente el contenido */
   }
+
+.btn-anadir:hover {
+    color: #CE8388; /* Mantiene el texto en blanco */
+}
+
+
   
   .btn-anadir i {
     margin-right: 12px; /* Espacio entre el texto y el icono */

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CardsComponent } from "../cards/cards.component";
+import { CardsComponent } from '../cards/cards.component';
 
 @Component({
   selector: 'app-carousel-principal',

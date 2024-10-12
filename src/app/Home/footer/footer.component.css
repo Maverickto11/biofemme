@@ -1,0 +1,139 @@
+
+.contacto {
+    display: flex;
+    justify-content: space-between; /* Distribuye el contenido a los extremos */
+    align-items: center; /* Centra verticalmente */
+    background-color: #B16B78; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px 50px; /* Espaciado interno (arriba-abajo 20px, izquierda-derecha 50px) */
+    width: 100%; /* Asegura que el footer abarque todo el ancho de la página */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del footer */
+    bottom: 0; /* Ubica el footer en la parte inferior de la página */
+}
+
+.footer-left, .footer-right {
+    flex: 1; /* Hace que ambas secciones ocupen el mismo espacio */
+    text-align: center;
+}
+
+.footer-link {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Quitar subrayado del enlace */
+    font-family: "Futura", sans-serif; /* Fuente */
+    font-size: 18px;
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+.img-footer {
+    position: relative;
+    background-image: url('/assets/img/Categorías/footer-bf-copia.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.411);
+    z-index: 1;
+}
+
+.logo-texto-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    z-index: 2;
+    text-align: center;
+}
+
+.logo-footer {
+    max-width: 400px;
+    height: auto;
+}
+
+.text-giofemme {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    color: white;
+    margin-top: 10px;
+    line-height: 18px;
+}
+
+.text-der, .text-der-compra {
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: last baseline; /* Centra los elementos horizontalmente */
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    z-index: 2;
+    margin-bottom: 50px;
+}
+
+.text-der-compra {
+    margin-right: 100px;
+}
+
+/* Ajuste para los enlaces en fila */
+.text-der a {
+    display: inline-block; /* Asegura que los enlaces estén en línea */
+    margin-right: 10px; /* Espacio entre los enlaces */
+    text-decoration: none;
+    margin-top: 5px;
+    font-family: "Nunito Sans", sans-serif; /* Familia de la fuente */
+    font-weight: 300; /* Peso 300 (ligero) */
+    font-size: 16px; /* Tamaño de letra */
+    line-height: 25px; /* Altura de línea */
+    color: rgb(255, 255, 255); /* Color blanco */
+}
+
+/* Paymentez centrado */
+.paymentez {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.text-tienda-online {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    margin-top: 50px;   
+    color: white;
+}
+.text-der-compra{
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 20px;
+    margin-top: 10px;
+    color: white;
+
+}
+.copyright {
+    color: white;
+    font-family: "Nunito Sans", sans-serif;
+}
+.copy{
+    text-align: center;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    color: rgb(100, 100, 100);
+    padding: 6px;
+
+}
