@@ -1,0 +1,21 @@
+<div class="bg-white" style="margin-top: 60px;">
+
+    <h2 class="tracking-tight text-center"
+        style="font-family: Futura, sans-serif; font-size: 40px; line-height: 56px; font-weight: 500; color: rgb(170, 170, 170);">
+        CATEGORÍAS DE PRODUCTOS BIOFEMME
+    </h2>
+    <h3 class="tracking-tight text-center"
+        style="font-family: Futura, sans-serif; font-size: 20px; line-height: 56px; font-weight: 300; color: rgb(170, 170, 170); font-style: normal;">
+        DALE CLICK Y DESCUBRE LOS PRODUCTOS DE CADA UNA
+    </h3>
+
+    <div class="categorias-container">
+        <div class="categoria" *ngFor="let categoria of categorias">
+          <div class="imagen-container">
+            <img class="imagen" [src]="categoria.imagen" [alt]="categoria.nombre" />
+            <img class="imagen-hover" [src]="categoria.imagenHover" [alt]="categoria.nombre + ' Hover'" />
+          </div>
+          <div class="titulo">{{ categoria.nombre }}</div>
+        </div>
+      </div>
+</div>
