@@ -4,6 +4,7 @@ import { ProductoComponent } from './producto/producto.component';
 
 export const routes: Routes = [
     { path: '', component: CarouselPrincipalComponent },
+    { path: 'home', component: CarouselPrincipalComponent },
     { path: 'producto/:id', component: ProductoComponent },
     { path: 'producto', component: ProductoComponent },
 

@@ -52,9 +52,9 @@
             <h3 class="toggle-button" (click)="toggleContent('employment')">
                 <span class="arrow" [ngClass]="{'active': isContentVisible['employment']}">▶</span>
 
-                <b>MODO DE EMPLEO</b>
+                <b style="margin-right: 20px;" >MODO DE EMPLEO</b>
             </h3>
-            <ol *ngIf="isContentVisible['employment']">
+            <ol class="texto-ol" style="color: #606060" *ngIf="isContentVisible['employment']" >
                 <li>1. Realizar la rutina de cuidado facial habitual.</li>
                 <li>2. Aplicar y extender sobre cara, cuello y escote, incluyendo contorno de ojos y párpados antes del
                     maquillaje.</li>
@@ -66,10 +66,10 @@
         <div class="usage-instructions-2">
             <h3 class="toggle-button" (click)="toggleContent('ingredients')">
                 <span class="arrow" [ngClass]="{'active': isContentVisible['ingredients']}">▶</span>
-                <b>INGREDIENTES BIO-ACTIVOS</b>
+                <b style="white-space: nowrap">INGREDIENTES BIO-ACTIVOS</b>
 
             </h3>
-            <ol class="ol" *ngIf="isContentVisible['ingredients']">
+            <ol style="color: #606060" class="ol" *ngIf="isContentVisible['ingredients']">
                 <li>Tens’ Up™</li>
                 <li>Neosome EM Ultrafill</li>
                 <li>Partículas “Soft Focus”</li>
