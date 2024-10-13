@@ -1,0 +1,47 @@
+<!-- Botón flotante -->
+<div class="fixed bottom-5 right-5 z-50" (click)="toggleModal()">
+    <img src="/assets/img/whatsapp (2).png" alt="WhatsApp" class="w-16 h-16 cursor-pointer" (mouseover)="showTooltip = true" (mouseout)="showTooltip = false">
+    <div *ngIf="showTooltip" class="absolute bg-white text-black text-xs rounded py-2 px-3 bottom-5 right-48 transform translate-x-1/2" style="white-space: nowrap;">
+        ¿Necesitas ayuda #BFLover?💕
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div *ngIf="isModalVisible" class="fixed bottom-5 right-5 z-50">
+    <!-- Ajusta el valor 'bottom' para que tape el botón -->
+    <div class="bg-white rounded-2xl shadow-lg relative w-80"> <!-- Cambiado a 'rounded-2xl' -->
+        <!-- Parte Superior Verde -->
+        <div class="bg-green-500 text-white py-4 px-6 rounded-t-lg flex items-center">
+            <!-- Cambié justify-between por items-center -->
+            <img src="/assets/img/whatsapp (2).png" alt="WhatsApp" class="w-6 h-6 mr-2"> <!-- Icono de WhatsApp -->
+            <h3 class="text-xl font-semibold">WhatsApp</h3> <!-- Título a la izquierda -->
+            <button (click)="closeModal()" class="text-white font-bold text-lg ml-auto">&times;</button>
+            <!-- Botón de cerrar, con margen izquierdo automático -->
+        </div>
+        <!-- Mensaje en el Medio -->
+        <div class="p-4">
+            <img src="/assets/img/txt.png" style="width: 100%;" alt="">
+            <!-- Punta de la burbuja -->
+            <div
+                class="absolute left-3 top-1/2 transform -translate-y-1/2 w-0 h-0 border-l-8 border-l-green-100 border-t-8 border-t-transparent border-b-8 border-b-transparent">
+            </div>
+        </div>
+        <!-- Botón al Final -->
+        <div class="px-4 pb-4 flex justify-end">
+            <a href="https://web.whatsapp.com/send?phone=593994074956&text=%C2%A1Hola!%20%F0%9F%98%8A%20Vengo%20de%20la%20tienda%20%23BioFemme%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre" target="_blank">
+                <button type="button"
+                    class="bg-[#22C55E] text-white py-2 px-4 rounded-full hover:bg-green-600 transition duration-200 flex items-center">
+                    <p style="margin-right: 10px;">Ir al Chat</p>
+                    <ng-container *ngIf="showFirstGif; else secondGif">
+                        <img src="/assets/img/gif1.gif" alt="GIF 1" class="w-6 h-6 mr-2 mt-1" (load)="onGifLoad('first')">
+                    </ng-container>
+                    <ng-template #secondGif>
+                        <img src="/assets/img/gif2.gif" alt="GIF 2" class="w-6 h-6 mr-2 mt-1" (load)="onGifLoad('second')">
+                    </ng-template>
+                </button>
+            </a>
+            
+        </div>
+    </div>
+</div>
