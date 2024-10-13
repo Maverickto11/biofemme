@@ -1,321 +1,752 @@
+.tituloh1{
+    font-size: 30px;
+    color: #747474;
+    text-align: center;
+    margin-top: 30px;
+}
+.tituloh1 h1{
+    color: #505050;
+}
+
+
+/**----------------link---------------*/
+
+.breadcrumb {
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    color: #777; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+    margin-left: 100px;
+    margin-top: 80px;
+}
+
+.breadcrumb a {
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    color: #B16B78; /* Color de los enlaces */
+    transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+.breadcrumb a:hover {
+    color: #CE8388; /* Color del enlace al pasar el ratón */
+}
+
+.breadcrumb span {
+    color: #777; /* Color del texto no enlazado */
+}
+
+/*--------------------------*/
 .product-detail {
     font-family: "Nunito Sans", sans-serif;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: imagen, info y uso */
-    gap: 20px; /* Espacio entre las columnas */
-    align-items: start; /* Alinear los elementos al inicio de cada celda */
-    margin: 20px; /* Margen alrededor del contenedor */
-    background-color: #ffffff; /* Fondo blanco */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    padding: 20px; /* Espaciado interno */
-  }
-  
-  .product-image {
-    position: relative; /* Necesario para posicionar la etiqueta "Nuevo Producto" */
-  }
-  
-  .product-image img {
-    max-width: 115%;
-    border-radius: 8px; /* Bordes redondeados para la imagen */
-  }
-  
-  .new-product-label {
+    grid-template-columns: 1fr 2fr 1fr;
+    /* Tres columnas: imagen, info y uso */
+    gap: 20px;
+    /* Espacio entre las columnas */
+    align-items: start;
+    /* Alinear los elementos al inicio de cada celda */
+    margin: 20px;
+    /* Margen alrededor del contenedor */
+    background-color: #ffffff;
+    /* Fondo blanco */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra sutil */
+    padding: 20px;
+    /* Espaciado interno */
+}
+
+.product-image {
+    position: relative;
+    /* Necesario para posicionar la etiqueta "Nuevo Producto" */
+}
+
+.product-image img {
+    max-width: 120%;
+}
+
+.new-product-label {
     position: absolute;
     top: 10px;
     left: 10px;
-    background-color: #ff4081; /* Color del fondo de la etiqueta */
-    color: #ffffff; /* Color del texto de la etiqueta */
+    background-color: #ff4081;
+    /* Color del fondo de la etiqueta */
+    color: #ffffff;
+    /* Color del texto de la etiqueta */
     padding: 5px 10px;
-    border-radius: 5px; /* Bordes redondeados para la etiqueta */
-    font-size: 14px; /* Tamaño del texto */
-  }
-  
-  .product-info {
+    border-radius: 5px;
+    /* Bordes redondeados para la etiqueta */
+    font-size: 14px;
+    /* Tamaño del texto */
+}
+
+.product-info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 225px; /* Margen derecho para separar de la columna de la derecha */
-    margin-left: 100px; /* Margen derecho para separar de la columna de la derecha */
-  }
-  
-  .product-name {
+    width: 100%;
+    /* Abarca el ancho disponible */
+    margin-left: 100px;
+    /* Espacio a la izquierda de la información */
+}
+
+.product-name {
     font-size: 24px;
     font-weight: bold;
-    color: #B16B78; /* Color del nombre del producto */
-  }
-  
-  .product-subtitle {
+    color: #B16B78;
+    /* Color del nombre del producto */
+}
+
+.product-subtitle {
     font-size: 17px;
     color: #B16B78;
-  }
-  
-  .product-details {
+}
+
+.product-details {
     margin-top: 3px;
     font-size: 15px;
-    color: #777; /* Color de los detalles del producto */
-  }
-  
-  .product-features {
+    color: #777;
+    /* Color de los detalles del producto */
+}
+
+.product-features {
     margin-top: 30px;
     margin-left: 40px;
     color: #5a5a5a;
     list-style-type: none;
     padding: 0;
     list-style-type: disc;
-  }
-  
-  .product-price {
+}
+
+.product-price {
     font-size: 22px;
-    color: #424242; /* Color del precio */
+    color: #424242;
+    /* Color del precio */
 
     margin-top: 30px;
-  }
-  
-  .product-actions {
+}
+
+.product-actions {
     margin-top: 20px;
     display: flex;
     align-items: center;
 }
-  
-  .quantity-input {
+
+.quantity-input {
     width: 50px;
     text-align: center;
     padding: 5px;
     margin-right: 20px;
-    border: 1px solid #cfcfcfc5; /* Borde del input */
-  }
-  .btn-anadir {
+    border: 1px solid #cfcfcfc5;
+    /* Borde del input */
+}
+
+.btn-anadir {
     background-color: transparent;
     color: #CE8388;
     font-size: 17px;
-    border: none; /* Sin borde */
+    border: none;
+    /* Sin borde */
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    transition: box-shadow 0.3s, color 0.3s; /* Transición suave */
+    transition: box-shadow 0.3s, color 0.3s;
+    /* Transición suave */
 
-  }
-
-.btn-anadir:hover {
-    color: #CE8388; /* Mantiene el color del texto */
-    box-shadow: 0 0 8px #cc6c73; /* Añade sombra al pasar el ratón */
 }
 
-.whatsapp{
+#carrito:hover {
+    color: #CE8388;
+    /* Mantiene el color del texto */
+    box-shadow: 0 0 8px #cc6c73;
+    /* Añade sombra al pasar el ratón */
+}
+
+.whatsapp {
     margin-left: 25px;
     width: 40px;
-    transition: opacity 0.1s; /* Transición suave */
+    transition: opacity 0.1s;
+    /* Transición suave */
 
 }
 
 .product-actions:hover .whatsapp {
-    content: url('/assets/img/whatsapp.png'); /* Cambia la imagen al pasar el mouse */
+    content: url('/assets/img/whatsapp.png');
+    /* Cambia la imagen al pasar el mouse */
 }
 
-  .btn-add-cart, .btn-whatsapp {
+.btn-add-cart,
+.btn-whatsapp {
     padding: 10px 15px;
-    background-color: #ff4081; /* Color de fondo de los botones */
+    background-color: #ff4081;
+    /* Color de fondo de los botones */
     color: #fff;
     border: none;
-    border-radius: 5px; /* Bordes redondeados para los botones */
+    border-radius: 5px;
+    /* Bordes redondeados para los botones */
     cursor: pointer;
-    transition: background-color 0.3s; /* Transición suave para el hover */
-  }
-  .toggle-button b {
-    transition: transform 0.3s ease; /* Suaviza la transición del movimiento del título */
-}
-.toggle-button:hover b {
-    transform: translateY(-3px); /* Eleva el título ligeramente al pasar el mouse */
-}
-  .btn-add-cart:hover, .btn-whatsapp:hover {
-    background-color: #ff6696; /* Color al pasar el ratón */
-  }
-  
-  .usage-instructions-container {
-    margin-top: 70px; /* Espaciado superior entre el producto y las instrucciones */
-}
-
-.usage-instructions, .usage-instructions-2 {
-    margin-bottom: 20px; /* Espacio entre las secciones */
-    margin-right: 60px; 
-}
-.content.ng-enter {
-    max-height: 200px; /* Altura máxima durante la expansión */
-    opacity: 1; /* Se vuelve visible */
-}
-
-.toggle-button {
-    display: flex; /* Para alinear el texto y la flecha */
-    align-items: center; /* Centra verticalmente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    color: #B16B78;
-    transition: transform 0.3s ease;
-}
-.content.ng-leave {
-    max-height: 0; /* Regresa a 0 cuando se colapsa */
-    opacity: 0; /* Se vuelve invisible */
-}
-
-
-.toggle-button {
-    display: flex; /* Para alinear el texto y la flecha */
-    align-items: center; /* Centra verticalmente */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    transition: transform 0.3s; /* Suaviza la transición del movimiento */
+    transition: background-color 0.3s;
+    /* Transición suave para el hover */
 }
 
 .toggle-button b {
-    transition: transform 0.3s; /* Suaviza la transición del movimiento del título */
+    transition: transform 0.3s ease;
+    /* Suaviza la transición del movimiento del título */
+}
+
+.toggle-button:hover b {
+    transform: translateY(-3px);
+    /* Eleva el título ligeramente al pasar el mouse */
+}
+
+.btn-add-cart:hover,
+.btn-whatsapp:hover {
+    background-color: #ff6696;
+    /* Color al pasar el ratón */
+}
+
+.usage-instructions-container {
+    margin-top: 70px;
+    /* Espaciado superior entre el producto y las instrucciones */
+}
+
+.usage-instructions,
+.usage-instructions-2 {
+    margin-bottom: 20px;
+    /* Espacio entre las secciones */
+    margin-right: 6 0px;
+}
+
+.content.ng-enter {
+    max-height: 200px;
+    /* Altura máxima durante la expansión */
+    opacity: 1;
+    /* Se vuelve visible */
+}
+
+.toggle-button {
+    display: flex;
+    /* Para alinear el texto y la flecha */
+    align-items: center;
+    /* Centra verticalmente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
+    color: #B16B78;
+    transition: transform 0.3s ease;
+}
+
+.content.ng-leave {
+    max-height: 0;
+    /* Regresa a 0 cuando se colapsa */
+    opacity: 0;
+    /* Se vuelve invisible */
+}
+
+
+.toggle-button {
+    display: flex;
+    /* Para alinear el texto y la flecha */
+    align-items: center;
+    /* Centra verticalmente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el mouse */
+    transition: transform 0.3s;
+    /* Suaviza la transición del movimiento */
+}
+
+.toggle-button b {
+    transition: transform 0.3s;
+    /* Suaviza la transición del movimiento del título */
 }
 
 /* Ajusta el espaciado y movimiento al hacer clic */
 .toggle-button:hover b {
-    transform: translateY(-3px); /* Eleva el título ligeramente al pasar el mouse */
+    transform: translateY(-3px);
+    /* Eleva el título ligeramente al pasar el mouse */
 }
 
 .content {
-    max-height: 0; /* Comienza con una altura máxima de 0 */
-    opacity: 0; /* Comienza como invisible */
-    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Transiciones para altura y opacidad */
-    margin-top: 10px; /* Espacio entre el título y el contenido desplegable */
+    max-height: 0;
+    /* Comienza con una altura máxima de 0 */
+    opacity: 0;
+    /* Comienza como invisible */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+    /* Transiciones para altura y opacidad */
+    margin-top: 10px;
+    /* Espacio entre el título y el contenido desplegable */
 }
 
 .content.ng-enter {
-    max-height: 200px; /* Altura máxima durante la expansión */
-    opacity: 1; /* Se vuelve visible */
-    transform: translateY(-10px); /* Desplazamiento hacia arriba */
+    max-height: 200px;
+    /* Altura máxima durante la expansión */
+    opacity: 1;
+    /* Se vuelve visible */
+    transform: translateY(-10px);
+    /* Desplazamiento hacia arriba */
 }
 
 .content.ng-leave {
-    max-height: 0; /* Regresa a 0 cuando se colapsa */
-    opacity: 0; /* Se vuelve invisible */
-    transform: translateY(0); /* Sin desplazamiento */
+    max-height: 0;
+    /* Regresa a 0 cuando se colapsa */
+    opacity: 0;
+    /* Se vuelve invisible */
+    transform: translateY(0);
+    /* Sin desplazamiento */
 }
 
 .arrow {
-    margin-right: 10px; /* Espacio entre el texto y la flecha */
-    transition: transform 0.3s; /* Transición suave para la rotación */
+    margin-right: 10px;
+    /* Espacio entre el texto y la flecha */
+    transition: transform 0.3s;
+    /* Transición suave para la rotación */
 }
 
 /* Cambia la dirección de la flecha */
 .arrow {
-    transform: rotate(0deg); /* Flecha apunta hacia la derecha por defecto */
+    transform: rotate(0deg);
+    /* Flecha apunta hacia la derecha por defecto */
 }
 
 .arrow.active {
-    transform: rotate(-90deg); /* Rota la flecha hacia arriba cuando está activa */
+    transform: rotate(-90deg);
+    /* Rota la flecha hacia arriba cuando está activa */
 }
 
 .divider {
-    height: 1px; /* Altura de la línea divisoria */
-    background-color: #ccc; /* Color gris de la línea */
-    margin-top: 10px; /* Espacio entre el contenido y la línea */
-    width: 125%; /* Ancho completo */
+    height: 1px;
+    /* Altura de la línea divisoria */
+    background-color: #ccc;
+    /* Color gris de la línea */
+    margin-top: 10px;
+    /* Espacio entre el contenido y la línea */
+    width: 125%;
+    /* Ancho completo */
 }
-ol {
-    margin-left: 20px; /* Espacio a la izquierda de la lista */
-    list-style-type: disc; /* Cambia la numeración a puntos */
+
+.ol {
+    margin-left: 20px;
+    /* Espacio a la izquierda de la lista */
+    list-style-type: disc;
+    /* Cambia la numeración a puntos */
 }
 
 
 /*¿Cómo usar?*/
 .contenidoTitulo {
-    display: flex; /* Usar flexbox para centrar */
-    flex-direction: column; /* Colocar los elementos en columna */
-    align-items: center; /* Centrar horizontalmente */
-    text-align: center; /* Centrar el texto */
-    margin-right: 0px; /* Ajustar el margen izquierdo */
+    display: flex;
+    /* Usar flexbox para centrar */
+    flex-direction: column;
+    /* Colocar los elementos en columna */
+    align-items: center;
+    /* Centrar horizontalmente */
+    text-align: center;
+    /* Centrar el texto */
+    margin-right: 0px;
+    /* Ajustar el margen izquierdo */
     margin-top: 50px;
 }
 
 .imgUsar {
-    margin-top: 50px; /* Eliminar margen del título */
-    margin-right: 50px; /* Ajustar el margen derecho */
+    margin-top: 50px;
+    /* Eliminar margen del título */
+    margin-right: 50px;
+    /* Ajustar el margen derecho */
 }
+
 .comoUsar {
-    
-    font-size: 25px; /* Tamaño del texto */
+
+    font-size: 25px;
+    /* Tamaño del texto */
     margin-left: 70px;
-    font-weight: bold; /* Poner la letra en negrita */
+    font-weight: bold;
+    /* Poner la letra en negrita */
     color: #6e6e6e;
 }
 
 .gifContainer {
-    display: flex; /* Usar flexbox para alinear el GIF a la derecha */
-    margin-top: 20px; /* Espacio superior para separar del título */
+    display: flex;
+    /* Usar flexbox para alinear el GIF a la derecha */
+    margin-top: 20px;
+    /* Espacio superior para separar del título */
 }
 
 .gif {
-    width: 100%; /* Ajusta el tamaño del GIF según tus necesidades */
-    height: auto; /* Mantener la proporción del GIF */
+    width: 100%;
+    /* Ajusta el tamaño del GIF según tus necesidades */
+    height: auto;
+    /* Mantener la proporción del GIF */
     margin-left: 250px;
     margin-top: 20px;
 }
 
 /* conoce sus propiedades */
 .main-container {
-    max-width: 1200px; /* Limita el ancho máximo del contenedor */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    padding: 0 20px; /* Espaciado a los lados */
+    max-width: 1200px;
+    /* Limita el ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    padding: 0 20px;
+    /* Espaciado a los lados */
 }
+
 .line-container {
-    display: flex; /* Utiliza flexbox para alinear la línea y el círculo */
-    align-items: center; /* Centra verticalmente */
-    justify-content: center; /* Centra horizontalmente */
-    margin: 20px 0; /* Espaciado superior e inferior */
+    display: flex;
+    /* Utiliza flexbox para alinear la línea y el círculo */
+    align-items: center;
+    /* Centra verticalmente */
+    justify-content: center;
+    /* Centra horizontalmente */
+    margin: 20px 0;
+    /* Espaciado superior e inferior */
 }
 
 .line {
-    flex: 1; /* Hace que la línea ocupe todo el espacio disponible */
-    height: 2px; /* Altura de la línea */
-    background-color: #c5c5c5; /* Color de la línea */
+    flex: 1;
+    /* Hace que la línea ocupe todo el espacio disponible */
+    height: 2px;
+    /* Altura de la línea */
+    background-color: #c5c5c5;
+    /* Color de la línea */
 }
 
 .circle {
-    width: 30px; /* Ancho del círculo */
-    height: 30px; /* Altura del círculo */
-    border-radius: 50%; /* Hace que el div sea un círculo */
-    background-color: #fff; /* Color de fondo del círculo */
-    border: 2px solid #cecccc; /* Color y grosor del borde */
-    display: flex; /* Utiliza flexbox para centrar el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    margin: 0 10px; /* Espaciado lateral entre la línea y el círculo */
+    width: 30px;
+    /* Ancho del círculo */
+    height: 30px;
+    /* Altura del círculo */
+    border-radius: 50%;
+    /* Hace que el div sea un círculo */
+    background-color: #fff;
+    /* Color de fondo del círculo */
+    border: 2px solid #cecccc;
+    /* Color y grosor del borde */
+    display: flex;
+    /* Utiliza flexbox para centrar el contenido */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    margin: 0 10px;
+    /* Espaciado lateral entre la línea y el círculo */
 
 }
 
 .question-mark {
-    font-size: 20px; /* Tamaño del signo de interrogación */
-    color: #bebebe; /* Color del signo de interrogación */
+    font-size: 20px;
+    /* Tamaño del signo de interrogación */
+    color: #bebebe;
+    /* Color del signo de interrogación */
 }
+
 .info-container {
-    margin-top: 60px; /* Espaciado superior para separar del círculo */
-    display: flex; /* Utiliza flexbox para alinear los elementos */
-    align-items: flex-start; /* Alinea el contenido al principio */
-    justify-content: space-between; /* Espacia los elementos hacia los extremos */
-    padding: 20px; /* Espaciado interno alrededor del contenedor */
+    margin-top: 60px;
+    /* Espaciado superior para separar del círculo */
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    align-items: flex-start;
+    /* Alinea el contenido al principio */
+    justify-content: space-between;
+    /* Espacia los elementos hacia los extremos */
+    padding: 20px;
+    /* Espaciado interno alrededor del contenedor */
 
 
 }
 
 .title {
-    flex: 0 0 200px; /* Ancho fijo para el título */
-    font-weight: bold; /* Texto en negrita */
-    font-size: 21px; /* Tamaño de fuente */
-    color: #5f5f5f; /* Color del texto */
+    flex: 0 0 200px;
+    /* Ancho fijo para el título */
+    font-weight: bold;
+    /* Texto en negrita */
+    font-size: 21px;
+    /* Tamaño de fuente */
+    color: #5f5f5f;
+    /* Color del texto */
     font-family: "Nunito Sans", sans-serif;
     margin-top: 13px;
 
 }
 
 .description {
-    flex: 1; /* Permite que la descripción ocupe el resto del espacio disponible */
-    margin-left: 20px; /* Espacio entre el título y la descripción */
-    line-height: 1.6; /* Mejora la legibilidad del texto */
-    padding: 10px; /* Espaciado interno de la descripción */
-    border-left: 2px solid #CE8388; /* Línea a la izquierda de la descripción */
+    flex: 1;
+    /* Permite que la descripción ocupe el resto del espacio disponible */
+    margin-left: 20px;
+    /* Espacio entre el título y la descripción */
+    line-height: 1.6;
+    /* Mejora la legibilidad del texto */
+    padding: 10px;
+    /* Espaciado interno de la descripción */
+    border-left: 2px solid #CE8388;
+    /* Línea a la izquierda de la descripción */
     text-align: justify;
+}
+
+.button-container {
+    display: flex;
+    /* Utiliza flexbox para centrar el contenido */
+    justify-content: center;
+    /* Centra horizontalmente */
+    margin-top: 20px;
+    /* Espaciado superior del botón */
+}
+
+.btn-ver-mas {
+    display: flex;
+    position: relative;
+    padding: 10px 0;
+    /* Espaciado arriba y abajo */
+    font-family: 'Futura', sans-serif;
+    /* Fuente */
+    font-weight: 500;
+    /* Peso de la fuente */
+    font-size: 14px;
+    color: #B16B78;
+    /* Color del texto */
+    background-color: transparent;
+    /* Fondo transparente */
+    cursor: pointer;
+    border: none;
+    /* Quitar el borde */
+    position: relative;
+    /* Necesario para colocar las líneas */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+.btn-ver-mas::before,
+.btn-ver-mas::after {
+    content: '';
+    position: absolute;
+    left: -50px;
+    /* Hace que la línea sobresalga 20px a la izquierda */
+    right: -50px;
+    height: 1px;
+    background-color: rgb(177, 107, 120);
+    /* El mismo color que el texto */
+}
+
+.btn-ver-mas::before {
+    top: 0;
+    /* Línea en la parte superior */
+}
+
+.btn-ver-mas::after {
+    bottom: 0;
+    /* Línea en la parte inferior */
+}
+
+.btn-ver-mas:hover {
+    color: rgb(202, 55, 55);
+    /* Cambia el color del texto a blanco en hover */
+}
+
+
+/*Valoraciones de este producto*/
+
+.contenidoTitulos {
+    display: flex;
+    /* Usar flexbox para centrar */
+    flex-direction: column;
+    /* Colocar los elementos en columna */
+    align-items: flex-start;
+    /* Centrar horizontalmente */
+    text-align: center;
+    /* Centrar el texto */
+    margin-right: 0px;
+    /* Ajustar el margen izquierdo */
+    margin-top: 50px;
+}
+
+.contenidoTitulos h2 {
+    font-size: 25px;
+    /* Tamaño del texto */
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+    text-transform: uppercase;
+    color: #606060;
+
+}
+
+.contenidoTitulos h3 {
+    font-size: 20px;
+    /* Tamaño del texto */
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+    text-transform: uppercase;
+    margin-top: 25px;
+    color: #D3777D;
+}
+
+.rating {
+    display: flex;
+    /* Utiliza flexbox para alinear los elementos */
+    align-items: center;
+    /* Alinea verticalmente */
+    margin-top: 20px;
+    /* Espaciado superior */
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+    color: #CCD6DF;
+    /* Color del texto */
+    font-size: 25px;
+    /* Tamaño de la fuente */
+    margin-bottom: 25px;
+
+}
+
+.contenidoTituloListado {
+    display: flex;
+    /* Usar flexbox para centrar */
+    flex-direction: column;
+    /* Colocar los elementos en columna */
+    align-items: flex-start;
+    margin-right: 0px;
+    margin-top: 50px;
+    border: 1px solid #CCD6DF;
+    padding: 20px;
+    width: 85vw;
+    /* Ajusta el ancho al 90% del viewport */
+    margin-bottom: 40px;
+    /* Espaciado inferior */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    padding: 40px;
+
+}
+
+.contenidoTitulo h4 {
+    font-size: 20px;
+    /* Tamaño del texto */
+    letter-spacing: 1px;
+    /* Espaciado entre letras */
+    text-transform: uppercase;
+    color: #5f5f5f;
+
+}
+
+.acceder-link {
+    color: #B16B78;
+    /* Cambia este valor al color que desees */
+    text-decoration: none;
+    /* Quita el subrayado predeterminado del enlace */
+}
+
+.acceder-link:hover {
+    color: #444444;
+    /* Cambia el color al pasar el mouse, si lo deseas */
+}
+
+/*cards*/
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que las columnas se ajusten */
+    justify-content: space-between;
+    /* Espacio entre columnas */
+    padding: 10px;
+    /* Espacio alrededor del contenedor */
+    margin-bottom: 80px;
+}
+
+.producto {
+    flex: 0 1 calc(25% - 20px);
+    /* Cada producto ocupará un 25% del ancho menos el margen */
+    margin: 10px;
+    /* Espacio entre productos */
+    border-radius: 8px;
+    /* Bordes redondeados */
+    overflow: hidden;
+    /* Evita que el contenido se desborde */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: transform 0.3s ease;
+    /* Suaviza el efecto de hover */
+}
+
+.producto:hover {
+    transform: scale(1.05);
+    /* Efecto de hover para aumentar el tamaño */
+}
+
+.producto-imagen {
+    width: 100%;
+    /* La imagen ocupa todo el ancho del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+}
+
+.producto-info {
+    padding: 15px;
+    /* Espacio dentro del contenedor de información */
+}
+
+.producto-titulo {
+    font-size: 18px;
+    /* Tamaño del título */
+    margin: 0;
+    /* Sin margen */
+    color: #CE8388;
+    /* Color del título */
+}
+
+.producto-titulo-sub {
+    font-size: 16px;
+    /* Tamaño del título */
+    margin: 0;
+    /* Sin margen */
+    color: #CE8388;
+    /* Color del título */
+}
+
+.producto-descripcion {
+    font-size: 13px;
+    /* Tamaño de la descripción */
+    color: #888888;
+    /* Color de la descripción */
+}
+
+.producto-precio {
+    font-size: 16px;
+    /* Tamaño del precio */
+    color: #787878;
+    /* Color del precio */
+}
+
+.producto-precio-Sub {
+    margin-right: 5px;
+    font-size: 14px;
+    /* Tamaño del precio */
+    color: #808080;
+    /* Color del precio */
+}
+
+.btn-anadir {
+    background-color: transparent;
+    /* Color del botón */
+    color: rgb(114, 114, 114);
+    /* Color del texto */
+    font-size: 13px;
+    border: none;
+    /* Sin borde */
+    padding-top: 10px;
+    /* Espacio interno */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor al pasar sobre el botón */
+    display: flex;
+    /* Flexbox para alinear el icono */
+    align-items: normal;
+    /* Centra verticalmente el contenido */
+}
+
+.btn-anadir:hover {
+    color: #CE8388;
+    /* Mantiene el texto en blanco */
+}
+
+.btn-anadir i {
+    margin-right: 12px;
+    /* Espacio entre el texto y el icono */
 }

@@ -20,4 +20,39 @@ export class ProductoComponent {
   toggleContent(section: string) {
     this.isContentVisible[section] = !this.isContentVisible[section];
   }
+
+  productos = [
+    {
+      id: 1,
+      imagen: '/assets/img/Producto/producto5.jpg',
+      titulo: 'EYE MAKEUP REMOVER',
+      tituloSub: 'Desmaquillante Bifásico de Ojos',
+      descripcion: 'Limpieza | Todo tipo de piel',
+      precio: '$17.46',
+    },
+
+    {
+      imagen: '/assets/img/Producto/producto6.jpg',
+      titulo: 'TONIQUE REVITALISANT',
+      tituloSub: 'Tónico Revitalizante',
+      descripcion: 'Limpieza | Todo tipo de piel',
+      precio: '$18.16'
+    },
+    {
+      imagen: '/assets/img/Producto/Producto3.jpg',
+      titulo: 'SUNSCREEN 50+',
+      tituloSub: 'Bloqueador Solar',
+      descripcion: 'Protección | Todo tipo de piel',
+      precio: '$24.64'
+    },
+    {
+      imagen: '/assets/img/Producto/Producto4.jpg',
+      titulo: 'COLOUR CRÈME SOLAIRE',
+      tituloSub: 'Bloqueador Hidratante con Color',
+      descripcion: 'Protección | Todo tipo de piel',
+      precio: '$28.75 ',
+      precioAnterior: ''
+    },
+    // Agrega más productos según sea necesario
+  ];
 }

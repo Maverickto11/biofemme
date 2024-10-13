@@ -1,4 +1,22 @@
+<div class="tituloh1">
+    <h1>
+        LIFTING SERUM
+    </h1>
+    <h2>
+        Sérum Tensor
+    </h2>
+</div>
+<div class="breadcrumb">
+    <a href="/inicio">Inicio</a> / 
+    <a href="/productos">Productos</a> / 
+    <a href="/productos/proage">Proage</a> / 
+    <span>LIFTING SERUM</span>
+
+</div>
+<hr class="border-[#D5D5D5] my-6" style="width: 85%; margin: auto;">
+
 <div class="product-detail">
+
     <div class="product-image">
         <img src="/assets/img/Producto/Producto1.jpg" alt="Lifting Serum">
     </div>
@@ -17,8 +35,8 @@
         <!-- Botones para agregar al carrito -->
         <div class="product-actions">
             <input value="1" min="1" class="quantity-input">
-            <button class="btn-anadir">
-                <i class="fa fa-shopping-cart"></i>
+            <button id="carrito" class="btn-anadir">
+                <i  class="fa fa-shopping-cart"></i>
                 Añadir al carrito
             </button>
             <img class="whatsapp" src="/assets/img/whatsapp (2).png" alt="WhatsApp">
@@ -51,7 +69,7 @@
                 <b>INGREDIENTES BIO-ACTIVOS</b>
 
             </h3>
-            <ol *ngIf="isContentVisible['ingredients']">
+            <ol class="ol" *ngIf="isContentVisible['ingredients']">
                 <li>Tens’ Up™</li>
                 <li>Neosome EM Ultrafill</li>
                 <li>Partículas “Soft Focus”</li>
@@ -84,7 +102,9 @@
     <div class="info-container">
         <div class="title">CONOCE SUS PROPIEDADES</div>
         <div class="description">
-            BioFemme® Lifting Sérum es una fórmula innovadora que proporciona a la piel, instantáneamente, un efecto lifting y antiarrugas, otorgándole una textura uniforme que permita la aplicación del maquillaje en las mejores condiciones, y que este dure más tiempo.
+            BioFemme® Lifting Sérum es una fórmula innovadora que proporciona a la piel, instantáneamente, un efecto
+            lifting y antiarrugas, otorgándole una textura uniforme que permita la aplicación del maquillaje en las
+            mejores condiciones, y que este dure más tiempo.
         </div>
     </div>
 
@@ -93,13 +113,79 @@
         <div class="title">¿CÓMO ACTÚAN LOS INGREDIENTES BIO-ACTIVOS?</div>
         <div class="description">
             TENS’UP™<br>
-            Formado por la combinación de dos extractos vegetales, Achicoria y Tara, que juntos forman una matriz tridimensional sobre la piel aportándole efecto tensor inmediato. La Achicoria es originaria de Europa y de regiones templadas de Asia. Esta planta fue utilizada por los egipcios, los griegos y los romanos como planta medicinal y, además, en la Edad Media se la consideraba mágica. La Tara, por otra parte, es nativa de Perú pero se encuentra ampliamente distribuida en América Latina. Crece de manera silvestre en la altitud de los bosques y valles andinos, entre 1.000 y 3.100 metros de altura. Las moléculas que se extraen de estas dos plantas forman una red tridimensional sobre la piel que alisa la superficie cutánea proporcionando un aspecto terso y luminoso de forma inmediata.
-            
+            Formado por la combinación de dos extractos vegetales, Achicoria y Tara, que juntos forman una matriz
+            tridimensional sobre la piel aportándole efecto tensor inmediato. La Achicoria es originaria de Europa y de
+            regiones templadas de Asia. Esta planta fue utilizada por los egipcios, los griegos y los romanos como
+            planta medicinal y, además, en la Edad Media se la consideraba mágica. La Tara, por otra parte, es nativa de
+            Perú pero se encuentra ampliamente distribuida en América Latina. Crece de manera silvestre en la altitud de
+            los bosques y valles andinos, entre 1.000 y 3.100 metros de altura. Las moléculas que se extraen de estas
+            dos plantas forman una red tridimensional sobre la piel que alisa la superficie cutánea proporcionando un
+            aspecto terso y luminoso de forma inmediata.
+
             <br><br>NEOSOME EM ULTRAFILL<br>
-            Formado por Trehalosa y Trimetilglicina encapsulados en liposomas. Su mecanismo de acción es único y consiste en aumentar la flexibilidad de las membranas celulares y el contenido de agua en el interior de las células, para que éstas aumenten de volumen y se consiga un efecto de relleno de arrugas y aumento de firmeza en tan sólo unos minutos.
-            
+            Formado por Trehalosa y Trimetilglicina encapsulados en liposomas. Su mecanismo de acción es único y
+            consiste en aumentar la flexibilidad de las membranas celulares y el contenido de agua en el interior de las
+            células, para que éstas aumenten de volumen y se consiga un efecto de relleno de arrugas y aumento de
+            firmeza en tan sólo unos minutos.
+
             <br><br>PARTÍCULAS “SOFT FOCUS”<br>
-            Estas partículas son capaces de difuminar ópticamente las arrugas y las líneas de expresión. Las arrugas son perceptibles a simple vista por el contraste entre claros y oscuros que se acentúa con cualquier pliegue de la piel, por sutil que sea. Para eliminar las zonas oscuras se introducen estas pequeñas partículas esféricas que dispersan la luz, consiguiendo difuminar las arrugas y enmascarar las imperfecciones.
+            Estas partículas son capaces de difuminar ópticamente las arrugas y las líneas de expresión. Las arrugas son
+            perceptibles a simple vista por el contraste entre claros y oscuros que se acentúa con cualquier pliegue de
+            la piel, por sutil que sea. Para eliminar las zonas oscuras se introducen estas pequeñas partículas
+            esféricas que dispersan la luz, consiguiendo difuminar las arrugas y enmascarar las imperfecciones.
+
+            <div class="button-container"> <!-- Contenedor para centrar el botón -->
+                <button class="btn-ver-mas">Conoce más sobre otros ingredientes Bio-Activos</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr class="border-[#D5D5D5] my-6" style="margin-top: 150px;">
+
+
+    <div class="contenidoTitulos">
+        <h2>Valoraciones de este producto</h2>
+        <h3>LIFTING SERUM</h3>
+        <div class="rating">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span clVass="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+
+        </div>
+        <p>No hay valoraciones aún.</p>
+        <div class="contenidoTituloListado">
+            <h4>Sé el primero en valorar <span style="font-size: larger;">“LIFTING SERUM”</span></h4>
+            <p>Debes <a href="#" class="acceder-link">acceder</a> para publicar una valoración.</p>
+        </div>
+    </div>
+    <hr class="border-[#D5D5D5] my-6" style="margin-top: 10px;">
+
+    <div class="productos-container">
+
+        <div class="producto" *ngFor="let item of productos">
+            <img [src]="item.imagen" alt="{{ item.titulo }}" class="producto-imagen" />
+            <div class="producto-info">
+                <h3 class="producto-titulo">{{ item.titulo }}</h3>
+                <h3 class="producto-titulo-sub">{{ item.tituloSub }}</h3>
+                <p class="producto-descripcion">{{ item.descripcion }}</p>
+
+                @if (item.precioAnterior ) {
+                <del class="producto-precio-Sub">{{ item.precioAnterior }}</del>
+                <span class="producto-precio">{{ item.precio }}</span>
+                }@else {
+                <p class="producto-precio">{{ item.precio }}</p>
+                }
+                <button id="btn" class="btn-anadir">
+                    <i class="fa fa-shopping-cart"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+
         </div>
     </div>
 </div>
