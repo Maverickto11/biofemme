@@ -26,6 +26,7 @@
     <div class="productos-container">
 
         <div class="producto" *ngFor="let item of productos">
+            
             <a [routerLink]="['/producto', item.id]" class="producto-enlace">
 
             <img [src]="item.imagen" alt="{{ item.titulo }}" class="producto-imagen" />

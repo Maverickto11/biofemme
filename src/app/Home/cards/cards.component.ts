@@ -4,7 +4,6 @@ import { FooterComponent } from "../footer/footer.component";
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ProductoComponent } from '../../producto/producto.component';
-
 @Component({  
   selector: 'app-cards',
   standalone: true,
@@ -31,8 +30,9 @@ export class CardsComponent {
       titulo: 'LIFTING SERUM',
       tituloSub: 'Sérum Tensor',
       descripcion: 'Proage | Todo tipo de piel',
-      precio: '$21.57'
+      precio: '$21.57',
     },
+
     {
       imagen: '/assets/img/Producto/Producto2.jpg',
       titulo: 'SUNSCREEN 50+',
@@ -57,5 +57,7 @@ export class CardsComponent {
     },
     // Agrega más productos según sea necesario
   ];
-
+  getProductos() {
+    return this.productos;
+  }
 }

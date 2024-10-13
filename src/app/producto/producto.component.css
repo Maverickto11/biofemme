@@ -1,0 +1,321 @@
+.product-detail {
+    font-family: "Nunito Sans", sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Tres columnas: imagen, info y uso */
+    gap: 20px; /* Espacio entre las columnas */
+    align-items: start; /* Alinear los elementos al inicio de cada celda */
+    margin: 20px; /* Margen alrededor del contenedor */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  .product-image {
+    position: relative; /* Necesario para posicionar la etiqueta "Nuevo Producto" */
+  }
+  
+  .product-image img {
+    max-width: 115%;
+    border-radius: 8px; /* Bordes redondeados para la imagen */
+  }
+  
+  .new-product-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff4081; /* Color del fondo de la etiqueta */
+    color: #ffffff; /* Color del texto de la etiqueta */
+    padding: 5px 10px;
+    border-radius: 5px; /* Bordes redondeados para la etiqueta */
+    font-size: 14px; /* Tamaño del texto */
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 225px; /* Margen derecho para separar de la columna de la derecha */
+    margin-left: 100px; /* Margen derecho para separar de la columna de la derecha */
+  }
+  
+  .product-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #B16B78; /* Color del nombre del producto */
+  }
+  
+  .product-subtitle {
+    font-size: 17px;
+    color: #B16B78;
+  }
+  
+  .product-details {
+    margin-top: 3px;
+    font-size: 15px;
+    color: #777; /* Color de los detalles del producto */
+  }
+  
+  .product-features {
+    margin-top: 30px;
+    margin-left: 40px;
+    color: #5a5a5a;
+    list-style-type: none;
+    padding: 0;
+    list-style-type: disc;
+  }
+  
+  .product-price {
+    font-size: 22px;
+    color: #424242; /* Color del precio */
+
+    margin-top: 30px;
+  }
+  
+  .product-actions {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+  
+  .quantity-input {
+    width: 50px;
+    text-align: center;
+    padding: 5px;
+    margin-right: 20px;
+    border: 1px solid #cfcfcfc5; /* Borde del input */
+  }
+  .btn-anadir {
+    background-color: transparent;
+    color: #CE8388;
+    font-size: 17px;
+    border: none; /* Sin borde */
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: box-shadow 0.3s, color 0.3s; /* Transición suave */
+
+  }
+
+.btn-anadir:hover {
+    color: #CE8388; /* Mantiene el color del texto */
+    box-shadow: 0 0 8px #cc6c73; /* Añade sombra al pasar el ratón */
+}
+
+.whatsapp{
+    margin-left: 25px;
+    width: 40px;
+    transition: opacity 0.1s; /* Transición suave */
+
+}
+
+.product-actions:hover .whatsapp {
+    content: url('/assets/img/whatsapp.png'); /* Cambia la imagen al pasar el mouse */
+}
+
+  .btn-add-cart, .btn-whatsapp {
+    padding: 10px 15px;
+    background-color: #ff4081; /* Color de fondo de los botones */
+    color: #fff;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados para los botones */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición suave para el hover */
+  }
+  .toggle-button b {
+    transition: transform 0.3s ease; /* Suaviza la transición del movimiento del título */
+}
+.toggle-button:hover b {
+    transform: translateY(-3px); /* Eleva el título ligeramente al pasar el mouse */
+}
+  .btn-add-cart:hover, .btn-whatsapp:hover {
+    background-color: #ff6696; /* Color al pasar el ratón */
+  }
+  
+  .usage-instructions-container {
+    margin-top: 70px; /* Espaciado superior entre el producto y las instrucciones */
+}
+
+.usage-instructions, .usage-instructions-2 {
+    margin-bottom: 20px; /* Espacio entre las secciones */
+    margin-right: 60px; 
+}
+.content.ng-enter {
+    max-height: 200px; /* Altura máxima durante la expansión */
+    opacity: 1; /* Se vuelve visible */
+}
+
+.toggle-button {
+    display: flex; /* Para alinear el texto y la flecha */
+    align-items: center; /* Centra verticalmente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    color: #B16B78;
+    transition: transform 0.3s ease;
+}
+.content.ng-leave {
+    max-height: 0; /* Regresa a 0 cuando se colapsa */
+    opacity: 0; /* Se vuelve invisible */
+}
+
+
+.toggle-button {
+    display: flex; /* Para alinear el texto y la flecha */
+    align-items: center; /* Centra verticalmente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: transform 0.3s; /* Suaviza la transición del movimiento */
+}
+
+.toggle-button b {
+    transition: transform 0.3s; /* Suaviza la transición del movimiento del título */
+}
+
+/* Ajusta el espaciado y movimiento al hacer clic */
+.toggle-button:hover b {
+    transform: translateY(-3px); /* Eleva el título ligeramente al pasar el mouse */
+}
+
+.content {
+    max-height: 0; /* Comienza con una altura máxima de 0 */
+    opacity: 0; /* Comienza como invisible */
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out; /* Transiciones para altura y opacidad */
+    margin-top: 10px; /* Espacio entre el título y el contenido desplegable */
+}
+
+.content.ng-enter {
+    max-height: 200px; /* Altura máxima durante la expansión */
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(-10px); /* Desplazamiento hacia arriba */
+}
+
+.content.ng-leave {
+    max-height: 0; /* Regresa a 0 cuando se colapsa */
+    opacity: 0; /* Se vuelve invisible */
+    transform: translateY(0); /* Sin desplazamiento */
+}
+
+.arrow {
+    margin-right: 10px; /* Espacio entre el texto y la flecha */
+    transition: transform 0.3s; /* Transición suave para la rotación */
+}
+
+/* Cambia la dirección de la flecha */
+.arrow {
+    transform: rotate(0deg); /* Flecha apunta hacia la derecha por defecto */
+}
+
+.arrow.active {
+    transform: rotate(-90deg); /* Rota la flecha hacia arriba cuando está activa */
+}
+
+.divider {
+    height: 1px; /* Altura de la línea divisoria */
+    background-color: #ccc; /* Color gris de la línea */
+    margin-top: 10px; /* Espacio entre el contenido y la línea */
+    width: 125%; /* Ancho completo */
+}
+ol {
+    margin-left: 20px; /* Espacio a la izquierda de la lista */
+    list-style-type: disc; /* Cambia la numeración a puntos */
+}
+
+
+/*¿Cómo usar?*/
+.contenidoTitulo {
+    display: flex; /* Usar flexbox para centrar */
+    flex-direction: column; /* Colocar los elementos en columna */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Centrar el texto */
+    margin-right: 0px; /* Ajustar el margen izquierdo */
+    margin-top: 50px;
+}
+
+.imgUsar {
+    margin-top: 50px; /* Eliminar margen del título */
+    margin-right: 50px; /* Ajustar el margen derecho */
+}
+.comoUsar {
+    
+    font-size: 25px; /* Tamaño del texto */
+    margin-left: 70px;
+    font-weight: bold; /* Poner la letra en negrita */
+    color: #6e6e6e;
+}
+
+.gifContainer {
+    display: flex; /* Usar flexbox para alinear el GIF a la derecha */
+    margin-top: 20px; /* Espacio superior para separar del título */
+}
+
+.gif {
+    width: 100%; /* Ajusta el tamaño del GIF según tus necesidades */
+    height: auto; /* Mantener la proporción del GIF */
+    margin-left: 250px;
+    margin-top: 20px;
+}
+
+/* conoce sus propiedades */
+.main-container {
+    max-width: 1200px; /* Limita el ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    padding: 0 20px; /* Espaciado a los lados */
+}
+.line-container {
+    display: flex; /* Utiliza flexbox para alinear la línea y el círculo */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
+.line {
+    flex: 1; /* Hace que la línea ocupe todo el espacio disponible */
+    height: 2px; /* Altura de la línea */
+    background-color: #c5c5c5; /* Color de la línea */
+}
+
+.circle {
+    width: 30px; /* Ancho del círculo */
+    height: 30px; /* Altura del círculo */
+    border-radius: 50%; /* Hace que el div sea un círculo */
+    background-color: #fff; /* Color de fondo del círculo */
+    border: 2px solid #cecccc; /* Color y grosor del borde */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0 10px; /* Espaciado lateral entre la línea y el círculo */
+
+}
+
+.question-mark {
+    font-size: 20px; /* Tamaño del signo de interrogación */
+    color: #bebebe; /* Color del signo de interrogación */
+}
+.info-container {
+    margin-top: 60px; /* Espaciado superior para separar del círculo */
+    display: flex; /* Utiliza flexbox para alinear los elementos */
+    align-items: flex-start; /* Alinea el contenido al principio */
+    justify-content: space-between; /* Espacia los elementos hacia los extremos */
+    padding: 20px; /* Espaciado interno alrededor del contenedor */
+
+
+}
+
+.title {
+    flex: 0 0 200px; /* Ancho fijo para el título */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 21px; /* Tamaño de fuente */
+    color: #5f5f5f; /* Color del texto */
+    font-family: "Nunito Sans", sans-serif;
+    margin-top: 13px;
+
+}
+
+.description {
+    flex: 1; /* Permite que la descripción ocupe el resto del espacio disponible */
+    margin-left: 20px; /* Espacio entre el título y la descripción */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+    padding: 10px; /* Espaciado interno de la descripción */
+    border-left: 2px solid #CE8388; /* Línea a la izquierda de la descripción */
+    text-align: justify;
+}

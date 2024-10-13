@@ -1,1 +1,105 @@
-<h1>Hola mundo</h1>
+<div class="product-detail">
+    <div class="product-image">
+        <img src="/assets/img/Producto/Producto1.jpg" alt="Lifting Serum">
+    </div>
+
+    <div class="product-info">
+        <h1 class="product-name">LIFTING SERUM</h1>
+        <h2 class="product-subtitle">Sérum Tensor</h2>
+        <p class="product-details">Proage | Todo tipo de piel</p>
+        <ul class="product-features">
+            <li>Efecto Inmediato</li>
+            <li>Reduce Arrugas</li>
+            <li>Make Up Primer</li>
+        </ul>
+        <div class="product-price"><b>$21.57</b></div>
+
+        <!-- Botones para agregar al carrito -->
+        <div class="product-actions">
+            <input value="1" min="1" class="quantity-input">
+            <button class="btn-anadir">
+                <i class="fa fa-shopping-cart"></i>
+                Añadir al carrito
+            </button>
+            <img class="whatsapp" src="/assets/img/whatsapp (2).png" alt="WhatsApp">
+        </div>
+
+
+    </div>
+
+    <!-- Modo de Empleo (sección plegable) -->
+    <div class="usage-instructions-container">
+        <!-- Modo de Empleo -->
+        <div class="usage-instructions">
+            <h3 class="toggle-button" (click)="toggleContent('employment')">
+                <span class="arrow" [ngClass]="{'active': isContentVisible['employment']}">▶</span>
+
+                <b>MODO DE EMPLEO</b>
+            </h3>
+            <ol *ngIf="isContentVisible['employment']">
+                <li>1. Realizar la rutina de cuidado facial habitual.</li>
+                <li>2. Aplicar y extender sobre cara, cuello y escote, incluyendo contorno de ojos y párpados antes del
+                    maquillaje.</li>
+            </ol>
+            <div class="divider"></div> <!-- Línea divisoria -->
+        </div>
+
+        <!-- Ingredientes Bio-Activos -->
+        <div class="usage-instructions-2">
+            <h3 class="toggle-button" (click)="toggleContent('ingredients')">
+                <span class="arrow" [ngClass]="{'active': isContentVisible['ingredients']}">▶</span>
+                <b>INGREDIENTES BIO-ACTIVOS</b>
+
+            </h3>
+            <ol *ngIf="isContentVisible['ingredients']">
+                <li>Tens’ Up™</li>
+                <li>Neosome EM Ultrafill</li>
+                <li>Partículas “Soft Focus”</li>
+            </ol>
+            <div class="divider"></div> <!-- Línea divisoria -->
+        </div>
+    </div>
+
+    <!-- Descripción del Producto -->
+
+    <div class="contenidoTitulo">
+        <h2 class="comoUsar">¿CÓMO USAR?</h2>
+        <img class="imgUsar" width="60px" src="/assets/img/spa-150x150.png" alt="">
+    </div>
+    <div class="gifContainer">
+        <img src="/assets/img/serum-tensor.gif" alt="GIF de serum tensor" class="gif">
+    </div>
+
+
+
+</div>
+<div class="main-container">
+    <div class="line-container">
+        <div class="line"></div>
+        <div class="circle">
+            <span class="question-mark">?</span>
+        </div>
+        <div class="line"></div>
+    </div>
+    <div class="info-container">
+        <div class="title">CONOCE SUS PROPIEDADES</div>
+        <div class="description">
+            BioFemme® Lifting Sérum es una fórmula innovadora que proporciona a la piel, instantáneamente, un efecto lifting y antiarrugas, otorgándole una textura uniforme que permita la aplicación del maquillaje en las mejores condiciones, y que este dure más tiempo.
+        </div>
+    </div>
+
+
+    <div class="info-container">
+        <div class="title">¿CÓMO ACTÚAN LOS INGREDIENTES BIO-ACTIVOS?</div>
+        <div class="description">
+            TENS’UP™<br>
+            Formado por la combinación de dos extractos vegetales, Achicoria y Tara, que juntos forman una matriz tridimensional sobre la piel aportándole efecto tensor inmediato. La Achicoria es originaria de Europa y de regiones templadas de Asia. Esta planta fue utilizada por los egipcios, los griegos y los romanos como planta medicinal y, además, en la Edad Media se la consideraba mágica. La Tara, por otra parte, es nativa de Perú pero se encuentra ampliamente distribuida en América Latina. Crece de manera silvestre en la altitud de los bosques y valles andinos, entre 1.000 y 3.100 metros de altura. Las moléculas que se extraen de estas dos plantas forman una red tridimensional sobre la piel que alisa la superficie cutánea proporcionando un aspecto terso y luminoso de forma inmediata.
+            
+            <br><br>NEOSOME EM ULTRAFILL<br>
+            Formado por Trehalosa y Trimetilglicina encapsulados en liposomas. Su mecanismo de acción es único y consiste en aumentar la flexibilidad de las membranas celulares y el contenido de agua en el interior de las células, para que éstas aumenten de volumen y se consiga un efecto de relleno de arrugas y aumento de firmeza en tan sólo unos minutos.
+            
+            <br><br>PARTÍCULAS “SOFT FOCUS”<br>
+            Estas partículas son capaces de difuminar ópticamente las arrugas y las líneas de expresión. Las arrugas son perceptibles a simple vista por el contraste entre claros y oscuros que se acentúa con cualquier pliegue de la piel, por sutil que sea. Para eliminar las zonas oscuras se introducen estas pequeñas partículas esféricas que dispersan la luz, consiguiendo difuminar las arrugas y enmascarar las imperfecciones.
+        </div>
+    </div>
+</div>
