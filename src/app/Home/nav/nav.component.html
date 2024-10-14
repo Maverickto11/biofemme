@@ -1,105 +1,100 @@
-<div class="bg-pink-400 p-2 flex justify-between items-center text-white">
-  <div class="flex space-x-5 ml-20">
-      <a href="https://www.facebook.com/BioFemmeEc"><img src="assets/img/facebook.png" alt="facebook" class="w-5 h-5"></a>
-      <a href="https://www.instagram.com/biofemme_ec"><img src="assets/img/instagram.png" alt="Instagram" class="w-5 h-5"></a>
-      <a href="https://www.tiktok.com/@biofemme_ec"><img src="assets/img/tik-tok.png" alt="TikTok" class="w-5  h-5"></a>
-    
-  </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <div class="flex space-x-8 mr-20">
-    <a  class="flex items-center"><i class="fas fa-user-circle mr-1"></i> Mi Cuenta</a>
+<div class="bg-[#DB8993] -p-2 flex justify-between items-center text-white"style=" padding: 0.5%">
+  <div class="flex space-x-5 ml-4 sm:ml-20">
+    <a href="https://www.facebook.com/BioFemmeEc"><img src="assets/img/facebook.png" alt="facebook" class="w-5 h-5"></a>
+    <a href="https://www.instagram.com/biofemme_ec"><img src="assets/img/instagram.png" alt="Instagram" class="w-5 h-5"></a>
+    <a href="https://www.tiktok.com/@biofemme_ec"><img src="assets/img/tik-tok.png" alt="TikTok" class="w-5  h-5"></a>
+  </div>
+  <div class="flex space-x-8 mr-4 sm:mr-20">
+    <a class="flex items-center"><i class="fas fa-user-circle mr-1"></i> Mi Cuenta</a>
     <a href="#" class="flex items-center"><i class="fas fa-store mr-1"></i> Puntos de Venta</a>
   </div>
 </div>
 
 <!-- Barra de navegación principal -->
 <nav class="bg-white py-4 shadow-md">
-  <div class="container mx-auto flex justify-between items-center">
+  <div class="container mx-auto flex flex-wrap justify-between items-center px-4 md:px-0">
 
     <!-- Logo -->
-    <div class="flex items-center space-x-3 ml-11">
+    <div class="flex items-center space-x-3 ml-4 sm:ml-11">
       <img [routerLink]="['/home']" src="/assets/img/logo.png" alt="BioFemme Logo" style="background-color: #DB8993;" class="w-24 h-auto">
     </div>
 
     <!-- Enlaces de navegación -->
-    <div class="hidden md:flex space-x-6"
-    style="font-family: 'Nunito Sans', sans-serif; font-weight: 400; color: #DB8993; font-size: 18px; line-height: 22px;">
-    <a href="#" class="hover:text-[#37343A]">Tienda</a>
-    <div class="relative">
+    <div class="hidden md:flex space-x-6" style="font-family: 'Nunito Sans', sans-serif; font-weight: 400; color: #DB8993; font-size: 18px; line-height: 22px;">
+      <a href="#" class="hover:text-[#37343A]">Tienda</a>
+      <div class="relative">
         <a href="#" (mouseover)="showModal()" (mouseout)="hideModal()" class="hover:text-[#37343A] flex items-center">
             Productos <i class="fas fa-chevron-down ml-1"></i>
         </a>
         <!-- Modal -->
-        <div *ngIf="isModalVisible" class="absolute  transform -translate-x-1/3 translate-x-15
-        bg-gradient-to-r from-[#E399A1] to-[#F0B5B9] 
-        text-[#FFFFFF] shadow-lg p-10 mt-12 rounded-lg z-10 w-[900px]"
-             (mouseover)="resetTimer()" (mouseout)="startHideTimer()">
-            <div class="flex justify-between">
-                <!-- Primera columna -->
-                <div class="flex-1 mx-6">
-                    <h3 class="font-bold text-lg pb-4">CATEGORÍA</h3>
-                    <ul class="space-y-4">
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">LIMPIEZA</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">HIDRATACIÓN</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">PROTECCIÓN</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">PROAGE</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ACNE CONTROL</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">SETS</li>
-                    </ul>
-                </div>
-                <!-- Segunda columna -->
-                <div class="flex-1 mx-6">
-                    <h3 class="font-bold text-lg pb-4">USOS</h3>
-                    <ul class="space-y-4">
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">MANCHAS</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">OJERAS</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ARRUGAS</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ACNÉ</li>
-                    </ul>
-                </div>
-                <!-- Tercera columna -->
-                <div class="flex-1 mx-6">
-                    <h3 class="font-bold text-lg pb-4">TIPO DE PIEL</h3>
-                    <ul class="space-y-4">
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">NORMAL</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">SECA</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">MIXTA</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">GRASA</li>
-                        <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">TENDENCIA ACNEICA</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        <div *ngIf="isModalVisible" 
+     class="fixed inset-0 flex items-center justify-center z-10"
+     (wheel)="closeOnScroll($event)">
+  <div class="bg-gradient-to-r from-[#E399A1] to-[#F0B5B9] 
+       text-[#FFFFFF] shadow-lg p-10 rounded-lg w-full md:w-[900px]">
+    <div class="flex justify-between">
 
-    <div class="flex items-center justify-between w-full lg:w-1/3">
-      <!-- Input de búsqueda estilo YouTube -->
-      <input 
-        type="text" 
-        placeholder="¿Qué producto buscas?" 
-        class="flex-grow py-2 pl-4 text-gray-700 bg-white border border-gray-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-    
-      <!-- Botón de búsqueda con icono -->
-      <button 
-        class="flex items-center justify-center h-full bg-gray-100 border border-l-0 border-gray-300 rounded-r-full"
-        style="width: 60px; height: 44px;"
-      >
-        <img src="assets/img/busqueda.png" alt="Buscar" class="w-5 h-5">
+              <!-- Primera columna -->
+              <div class="flex-1 mx-6">
+                <h3 class="font-bold text-lg pb-4">CATEGORÍA</h3>
+                <ul class="space-y-4">
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">LIMPIEZA</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">HIDRATACIÓN</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">PROTECCIÓN</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">PROAGE</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ACNE CONTROL</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">SETS</li>
+                </ul>
+              </div>
+              <!-- Segunda columna -->
+              <div class="flex-1 mx-6">
+                <h3 class="font-bold text-lg pb-4">USOS</h3>
+                <ul class="space-y-4">
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">MANCHAS</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">OJERAS</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ARRUGAS</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">ACNÉ</li>
+                </ul>
+              </div>
+              <!-- Tercera columna -->
+              <div class="flex-1 mx-6">
+                <h3 class="font-bold text-lg pb-4">TIPO DE PIEL</h3>
+                <ul class="space-y-4">
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">NORMAL</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">SECA</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">MIXTA</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">GRASA</li>
+                  <li class="hover:text-[#DB8993] cursor-pointer border-b border-[#FFFFFF] pb-1 text-sm">TENDENCIA ACNEICA</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="flex items-center justify-between w-full lg:w-1/3 mt-4 md:mt-0" style="margin-right: 7%;">
+      <input type="text" placeholder="¿Qué producto buscas?" class="flex-grow py-2 pl-4 text-gray-700 bg-white border border-gray-300 rounded-l-full focus:outline-none focus:ring-2 focus:ring-blue-500">
+      
+      <button class="flex items-center justify-center h-full border border-l-0 border-gray-300 rounded-r-full transition-colors duration-300 bg-[#DB8993] hover:bg-white" style="width: 60px; height: 44px;">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="10" cy="10" r="7" />
+          <line x1="21" y1="21" x2="15" y2="15" />
+        </svg>
       </button>
     
-      <!-- Carrito de compras -->
       <a href="#" class="relative ml-4">
-        <!-- Imagen del carrito de compras -->
         <img src="/assets/img/carrito-de-compras.png" alt="Carrito de compras" class="h-6 w-6">
-        
-        <!-- Círculo con número -->
-        <span class="absolute top-0 right-0 transform translate-x-6 -translate-y-0 bg-[#DB8993] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-          3 <!-- Cambia este número dinámicamente según la cantidad en el carrito -->
-        </span>
+        <span class="absolute top-0 right-0 transform translate-x-6 -translate-y-0 bg-[#DB8993] text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">3</span>
       </a>
     </div>
+    
+    
+    
+    
   </div>
 </nav>
 

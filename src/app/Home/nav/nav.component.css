@@ -1,19 +1,62 @@
-.bg-pink-400{
-    background-color: #DB8993;
-}
+@media (max-width: 768px) {
+    .hidden {
+      display: block;
+    }
+  
+    .md\:flex {
+      display: none;
+    }
+  
+    .ml-20 {
+      margin-left: 10px;
+    }
+  
+    .mr-20 {
+      margin-right: 10px;
+    }
+  
+    .mx-6 {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  
+    .text-lg {
+      font-size: 14px;
+    }
+  
+    .w-full {
+      width: 100%;
+    }
+  
+    .flex-1 {
+      margin: 10px;
+    }
+  
+    .container {
+      padding: 0 15px;
+    }
+  
+    nav img {
+      width: 50px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .w-24 {
+      width: 60px;
+    }
+  
+    input[type="text"] {
+      font-size: 12px;
+      padding-left: 10px;
+    }
+  }
+ 
 
-button{
-    background-color: #DB8993;
+  button:hover svg {
+    color: #DB8993; /* Cambia el color de la lupa al color deseado */
 }
-
-nav{
-    font-family: "Nunito Sans", sans-serif;
-}
-.flex-1{
-    margin: 25px;
-} 
-#model{
-    width: 600px;
-    height: 300px;
-}
-

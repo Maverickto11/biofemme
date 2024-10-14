@@ -1,57 +1,75 @@
 .categorias-container {
-    display: flex;
-    justify-content: space-between; /* Espacio entre las imágenes */
-    padding: 10px; /* Espacio alrededor del contenedor */
-    overflow: hidden; /* Evita que el contenido se desborde */
-  }
-  
+  display: flex;
+  justify-content: space-between; /* Espacio entre las imágenes */
+  padding: 10px; /* Espacio alrededor del contenedor */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en líneas nuevas */
+}
+
+.categoria {
+  flex: 1 0 200px; /* Tarjetas ocupan espacio igual pero tienen un ancho mínimo */
+  margin: 10px; /* Espacio entre las tarjetas */
+  position: relative; /* Necesario para posicionar las imágenes */
+  max-width: 30%; /* Ancho máximo en pantallas grandes */
+}
+
+.imagen {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 0px; /* Opcional: bordes redondeados */
+  transition: opacity 0.8s ease, filter 0.8s ease; /* Transición más lenta para mayor suavidad */
+}
+
+.imagen-hover {
+  position: absolute; /* Posiciona la imagen de hover encima */
+  top: 0; /* Alinea al tope */
+  left: 0; /* Alinea a la izquierda */
+  right: 0; /* Alinea a la derecha */
+  bottom: 0; /* Alinea al fondo */
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 100%; /* Ocupa toda la altura del contenedor */
+  border-radius: 0px; /* Bordes redondeados */
+  opacity: 0; /* Inicialmente oculta */
+  transition: opacity 0.8s ease; /* Transición suave para mostrar la imagen en color */
+}
+
+.categoria:hover .imagen {
+  opacity: 0; /* Oculta la imagen original al hacer hover */
+  filter: grayscale(0%); /* Remueve el filtro de escala de grises al hacer hover */
+}
+
+.categoria:hover .imagen-hover {
+  opacity: 1; /* Muestra la imagen de hover al hacer hover */
+}
+
+.titulo {
+  position: absolute; /* Posiciona el título dentro del contenedor */
+  bottom: 0; /* Alinea el título al fondo */
+  left: 0; /* Alinea el título a la izquierda */
+  right: 0; /* Alinea el título a la derecha */
+  color: white; /* Color del texto */
+  font-family: "Futura Book", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center; /* Centra el texto */
+  padding: 25px 0; /* Espacio alrededor del texto */
+  border-radius: 0 0 8px 8px; /* Bordes redondeados en la parte inferior */
+}
+
+/* Media Queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
   .categoria {
-    flex: 1; /* Permite que cada imagen ocupe espacio igual */
-    margin: 0 5px; /* Espacio entre las imágenes */
-    position: relative; /* Necesario para posicionar las imágenes */
+      flex: 1 0 45%; /* Ocupa el 45% en dispositivos medianos */
+      max-width: 45%; /* Ancho máximo de 45% en pantallas medianas */
   }
-  
-  .imagen {
-    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    border-radius: 0px; /* Opcional: bordes redondeados */
-    transition: opacity 0.8s ease, filter 0.8s ease; /* Transición más lenta para mayor suavidad */
+}
+
+@media (max-width: 480px) {
+  .categoria {
+      flex: 1 0 100%; /* Ocupa el 100% en dispositivos pequeños */
+      max-width: 100%; /* Ancho máximo de 100% en pantallas pequeñas */
   }
-  
-  .imagen-hover {
-    position: absolute; /* Posiciona la imagen de hover encima */
-    top: 0; /* Alinea al tope */
-    left: 0; /* Alinea a la izquierda */
-    right: 0; /* Alinea a la derecha */
-    bottom: 0; /* Alinea al fondo */
-    width: 100%; /* Ocupa todo el ancho del contenedor */
-    height: 100%; /* Ocupa toda la altura del contenedor */
-    border-radius: 0px; /* Bordes redondeados */
-    opacity: 0; /* Inicialmente oculta */
-    transition: opacity 0.8s ease; /* Transición suave para mostrar la imagen en color */
-  }
-  
-  .categoria:hover .imagen {
-    opacity: 0; /* Oculta la imagen original al hacer hover */
-    filter: grayscale(0%); /* Remueve el filtro de escala de grises al hacer hover */
-  }
-  
-  .categoria:hover .imagen-hover {
-    opacity: 1; /* Muestra la imagen de hover al hacer hover */
-  }
-  .titulo {
-    position: absolute; /* Posiciona el título dentro del contenedor */
-    bottom: 0; /* Alinea el título al fondo */
-    left: 0; /* Alinea el título a la izquierda */
-    right: 0; /* Alinea el título a la derecha */
-    color: white; /* Color del texto */
-    font-family: "Futura Book", sans-serif;
-    font-size: 20px;
-    line-height: 30px;
-    text-align: center; /* Centra el texto */
-    padding: 25px 0; /* Espacio alrededor del texto */
-    border-radius: 0 0 8px 8px; /* Bordes redondeados en la parte inferior */
-  }
+}
 
 
   /*---------------------------------*/

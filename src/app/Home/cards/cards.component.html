@@ -12,41 +12,47 @@
     <div class="categorias-container">
         <div class="categoria" *ngFor="let categoria of categorias">
             <div class="imagen-container">
-                <img class="imagen" [src]="categoria.imagen" [alt]="categoria.nombre" />
-                <img class="imagen-hover" [src]="categoria.imagenHover" [alt]="categoria.nombre + ' Hover'" />
+                <img class="imagen" [src]="isSmallScreen ? categoria.imagenPequena : categoria.imagen"
+                    [alt]="categoria.nombre" />
+                <img class="imagen-hover" [src]="isSmallScreen ? categoria.imagenPequena : categoria.imagenHover"
+                    [alt]="categoria.nombre + ' Hover'" />
             </div>
             <div class="titulo">{{ categoria.nombre }}</div>
         </div>
     </div>
+
+
     <div>
         <h2 id="titulo-producto" class="tracking-tight text-center"
-            style=" font-family: 'Futura', sans-serif; font-size: 40px; line-height: 56px; margin: 30px 0; font-weight: 500; color: rgb(170, 170, 170);">
-            PRODUCTOS NUEVOS</h2>
+            style=" font-family: 'Futura', sans-serif; font-size: 3vw; line-height: 56px; margin: 30px 0; font-weight: 500; color: rgb(170, 170, 170);">
+            PRODUCTOS NUEVOS
+        </h2>
     </div>
+
     <div class="productos-container">
 
         <div class="producto" *ngFor="let item of productos">
-            
+
             <a [routerLink]="['/producto', item.id]" class="producto-enlace">
 
-            <img [src]="item.imagen" alt="{{ item.titulo }}" class="producto-imagen" />
-            <div class="producto-info">
-                <h3 class="producto-titulo">{{ item.titulo }}</h3>
-                <h3 class="producto-titulo-sub">{{ item.tituloSub }}</h3>
-                <p class="producto-descripcion">{{ item.descripcion }}</p>   
+                <img [src]="item.imagen" alt="{{ item.titulo }}" class="producto-imagen" />
+                <div class="producto-info">
+                    <h3 class="producto-titulo">{{ item.titulo }}</h3>
+                    <h3 class="producto-titulo-sub">{{ item.tituloSub }}</h3>
+                    <p class="producto-descripcion">{{ item.descripcion }}</p>
 
-                @if (item.precioAnterior ) {
-                <del  class="producto-precio-Sub">{{ item.precioAnterior }}</del>
-                <span class="producto-precio">{{ item.precio }}</span>
-                }@else {
+                    @if (item.precioAnterior ) {
+                    <del class="producto-precio-Sub">{{ item.precioAnterior }}</del>
+                    <span class="producto-precio">{{ item.precio }}</span>
+                    }@else {
                     <p class="producto-precio">{{ item.precio }}</p>
-                }
-                <button class="btn-anadir">
-                    <i class="fa fa-shopping-cart"></i>
-                    Añadir al carrito
-                </button>
-            </div>
-        </a>
+                    }
+                    <button class="btn-anadir">
+                        <i class="fa fa-shopping-cart"></i>
+                        Añadir al carrito
+                    </button>
+                </div>
+            </a>
 
         </div>
     </div>
@@ -59,7 +65,7 @@
             <img class="ver-productos" src="/assets/img/ver-productos-biofemme.jpg" alt="">
         </div>
     </div>
-    
+
     <div class="text-center">
         <div class="image-container">
             <div class="text-and-button-piel">
@@ -70,6 +76,5 @@
             <img class="ver-productos-piel" src="/assets/img/Categorías/banner-tablet-1024.jpg" alt="">
         </div>
     </div>
-    
-</div>
 
+</div>

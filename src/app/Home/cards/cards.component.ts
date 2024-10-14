@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { FooterComponent } from "../footer/footer.component";
 import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -15,12 +15,38 @@ export class CardsComponent {
   constructor(private route: ActivatedRoute) {}
 
   categorias = [
-    { nombre: 'LIMPIEZA', imagen: '/assets/img/Categorías/categoria img 1.jpg', imagenHover: '/assets/img/Categorías/categoria- img hover 1.jpg' },
-    { nombre: 'HIDRATACIÓN', imagen: '/assets/img/Categorías/categoria img 2.jpg', imagenHover: '/assets/img/Categorías/categoria img hover 2.jpg' },
-    { nombre: 'PROTECCIÓN', imagen: '/assets/img/Categorías/categoria img 3.jpg', imagenHover: '/assets/img/Categorías/categoria img hover 3.jpg' },
-    { nombre: 'PROAGE', imagen: '/assets/img/Categorías/categoria img 4.jpg', imagenHover: '/assets/img/Categorías/categoria img hover 4.jpg' },
-    { nombre: 'ACNÉ CONTROL', imagen: '/assets/img/Categorías/categoria img 5.jpg' , imagenHover: '/assets/img/Categorías/categoria img hover 5.jpg' }
-  ];
+    { 
+        nombre: 'LIMPIEZA', 
+        imagen: '/assets/img/Categorías/categoria img 1.jpg', 
+        imagenHover: '/assets/img/Categorías/categoria- img hover 1.jpg',
+        imagenPequena: '/assets/img/Categorías/categoria-1.jpg' // Nueva propiedad
+    },
+    { 
+        nombre: 'HIDRATACIÓN', 
+        imagen: '/assets/img/Categorías/categoria img 2.jpg', 
+        imagenHover: '/assets/img/Categorías/categoria img hover 2.jpg',
+        imagenPequena: '/assets/img/Categorías/categoria-2.jpg' // Nueva propiedad
+    },
+    { 
+        nombre: 'PROTECCIÓN', 
+        imagen: '/assets/img/Categorías/categoria img 3.jpg', 
+        imagenHover: '/assets/img/Categorías/categoria img hover 3.jpg',
+        imagenPequena: '/assets/img/Categorías/categoria-3.jpg' // Nueva propiedad
+    },
+    { 
+        nombre: 'PROAGE', 
+        imagen: '/assets/img/Categorías/categoria img 4.jpg', 
+        imagenHover: '/assets/img/Categorías/categoria img hover 4.jpg',
+        imagenPequena: '/assets/img/Categorías/categoria-4.jpg' // Nueva propiedad
+    },
+    { 
+        nombre: 'ACNÉ CONTROL', 
+        imagen: '/assets/img/Categorías/categoria img 5.jpg', 
+        imagenHover: '/assets/img/Categorías/categoria img hover 5.jpg',
+        imagenPequena: '/assets/img/Categorías/categoria-5.jpg' // Nueva propiedad
+    }
+];
+
   producto: any;
 
   productos = [
@@ -59,5 +85,16 @@ export class CardsComponent {
   ];
   getProductos() {
     return this.productos;
+  }
+
+  isSmallScreen: boolean = false;
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.isSmallScreen = window.innerWidth < 768; // Cambia 768 según tu necesidad
+  }
+
+  ngOnInit() {
+    this.isSmallScreen = window.innerWidth < 768; // Inicializa el estado en ngOnInit
   }
 }

@@ -32,4 +32,10 @@ export class NavComponent {
     clearTimeout(this.hideTimer);
     this.hideTimer = null;
   }
+  closeOnScroll(event: WheelEvent) {
+    if (event.deltaY > 0) {
+      this.isModalVisible = false; // Cierra el modal si se desplaza hacia abajo
+    }
+  }
+  
 }
