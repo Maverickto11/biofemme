@@ -1,0 +1,36 @@
+.carousel-container {
+  width: 100%; /* Asegura que el carrusel ocupe el 100% del ancho del contenedor */
+  overflow: hidden; /* Oculta el contenido que se desborda */
+}
+
+.carousel-item {
+  width: 100%; /* Asegura que cada ítem del carrusel ocupe el 100% del ancho del contenedor */
+  display: inline-block; /* Asegura que los ítems se alineen horizontalmente */
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 480px) {
+  .carousel-item {
+    width: 100%; /* Asegura que cada ítem del carrusel ocupe el 100% del ancho del contenedor en dispositivos móviles */
+  }
+
+  .carousel-container {
+    padding: 0.5rem; /* Ajusta el espaciado del contenedor en dispositivos móviles */
+  }
+
+  .rounded-full {
+    border-radius: 9999px; /* Bordes completamente redondeados */
+  }
+
+  .w-6 {
+    width: 24px; /* Ajustar el tamaño de los iconos en dispositivos móviles */
+  }
+
+  .h-6 {
+    height: 24px; /* Ajustar el tamaño de los iconos en dispositivos móviles */
+  }
+
+  .p-2 {
+    padding: 0.75rem; /* Aumentar el espaciado para facilitar el uso en pantallas pequeñas */
+  }
+}

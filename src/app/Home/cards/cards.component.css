@@ -259,7 +259,6 @@
 .ver-productos-piel {
   width: 100%; /* Asegúrate de que la imagen ocupe el ancho necesario */
   height: auto; /* Ajusta la altura según sea necesario */
-  margin-left: -100px;
   object-fit: cover; /* Para que la imagen no se deforme */
 }
 
@@ -415,6 +414,7 @@
   padding-right: 5px; /* Ajusta el padding en móviles */
   right: 10px; /* Mueve el contenedor hacia la derecha */
   text-align: right; /* Alinea el texto a la derecha */
+
 }
 }
 
@@ -437,8 +437,8 @@
   .text-and-button-piel {
     width: 80%; /* Asegura que el contenedor del texto sea más pequeño en móviles */
       padding-right: 10px; /* Ajusta el padding en móviles */
+      text-align: right;
       margin: 0 auto;
-      text-align: center;
   }
 }
   

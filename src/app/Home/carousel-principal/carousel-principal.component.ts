@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './carousel-principal.component.css'
 })
 export class CarouselPrincipalComponent implements OnInit {
-  images = [
+  images: string[] = [
     'assets/img/Carousel/Carousel-1.jpg',
     'assets/img/Carousel/Carousel-2.jpg',
     'assets/img/Carousel/Carousel-3.jpg',
