@@ -108,11 +108,13 @@
     margin: 0; /* Sin margen */
     color: #CE8388; /* Color del título */
   }
+
   .producto-titulo-sub {
-    font-size: 16px; /* Tamaño del título */
+    font-size: 16px; /* Tamaño del subtítulo */
     margin: 0; /* Sin margen */
     color: #CE8388; /* Color del título */
   }
+
   .producto-descripcion {
     font-size: 13px; /* Tamaño de la descripción */
     color: #888888; /* Color de la descripción */
@@ -122,7 +124,8 @@
     font-size: 16px; /* Tamaño del precio */
     color: #787878; /* Color del precio */
   }
-  .producto-precio-Sub{
+
+  .producto-precio-Sub {
     margin-right: 5px;
     font-size: 14px; /* Tamaño del precio */
     color: #808080; /* Color del precio */
@@ -140,16 +143,101 @@
     align-items: normal; /* Centra verticalmente el contenido */
   }
 
-.btn-anadir:hover {
-    color: #CE8388; /* Mantiene el texto en blanco */
-}
+  .btn-anadir:hover {
+    color: #CE8388; /* Cambia el color del texto al hacer hover */
+  }
 
-
-  
   .btn-anadir i {
     margin-right: 12px; /* Espacio entre el texto y el icono */
   }
 
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .producto {
+        flex: 0 1 calc(50% - 20px); /* Cada producto ocupa el 50% del ancho menos el margen */
+    }
+
+    .producto-titulo {
+        font-size: 16px; /* Reduce el tamaño del título */
+    }
+
+    .producto-titulo-sub {
+        font-size: 14px; /* Reduce el tamaño del subtítulo */
+    }
+
+    .producto-descripcion {
+        font-size: 12px; /* Reduce el tamaño de la descripción */
+    }
+
+    .producto-precio {
+        font-size: 14px; /* Reduce el tamaño del precio */
+    }
+
+    .producto-precio-Sub {
+        font-size: 12px; /* Reduce el tamaño del precio anterior */
+    }
+
+    .btn-anadir {
+        font-size: 12px; /* Ajusta el tamaño del botón */
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .producto {
+        flex: 0 1 calc(100% - 20px); /* Cada producto ocupa el 100% del ancho menos el margen */
+    }
+
+    .producto-titulo {
+        font-size: 14px; /* Reduce aún más el tamaño del título */
+    }
+
+    .producto-titulo-sub {
+        font-size: 12px; /* Reduce el tamaño del subtítulo */
+    }
+
+    .producto-descripcion {
+        font-size: 11px; /* Reduce el tamaño de la descripción */
+    }
+
+    .producto-precio {
+        font-size: 12px; /* Reduce el tamaño del precio */
+    }
+
+    .producto-precio-Sub {
+        font-size: 10px; /* Reduce el tamaño del precio anterior */
+    }
+
+    .btn-anadir {
+        font-size: 11px; /* Ajusta el tamaño del botón */
+    }
+}
+
+
+/* Media Queries globales para pantallas pequeñas */
+@media (max-width: 768px) {
+    :root {
+        --font-size-titulo: 16px;
+        --font-size-titulo-sub: 14px;
+        --font-size-descripcion: 12px;
+        --font-size-precio: 14px;
+        --font-size-precio-sub: 12px;
+        --font-size-boton: 12px;
+        --producto-width: calc(50% - 20px); /* Dos columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-titulo: 14px;
+        --font-size-titulo-sub: 12px;
+        --font-size-descripcion: 11px;
+        --font-size-precio: 12px;
+        --font-size-precio-sub: 10px;
+        --font-size-boton: 11px;
+        --producto-width: calc(100% - 20px); /* Una columna en pantallas muy pequeñas */
+    }
+}
 
   /*---------------------------------*/
   .text-center {
@@ -185,16 +273,15 @@
     width: 50%; /* Ajusta el ancho del área de contenido */
 }
 
-/* Estilo del título */
-.text-overlay, .text-overlay-piel, .text-overlay-piel-p{
-    font-family: "Futura Book", sans-serif;
-    font-size: 40px; /* Tamaño del texto */
-    font-weight: 400; /* Peso de la fuente para que sea más delgado */
-    color: #B16B78; /* Color del texto */
-    line-height: 1.2; /* Espaciado entre líneas */
-    margin-bottom: 20px; /* Espacio entre el título y el botón */
-}
 
+.text-overlay {
+  font-family: "Futura Book", sans-serif;
+  font-size: 40px; /* Tamaño de texto por defecto */
+  font-weight: 400;
+  color: #B16B78;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
 /* Estilo del botón */
 .btn-ver-mas, .btn-ver-mas-piel {
     display: inline-block;
@@ -258,18 +345,100 @@
     padding-right: 20px; /* Espaciado desde el borde izquierdo */
     width: 50%; /* Ajusta el ancho del área de contenido */
 }
-.text-overlay-piel{
-color: #b4b4b4;
+.text-overlay-piel, .text-overlay-piel-p {
+  font-family: "Futura Book", sans-serif;
+  font-size: 40px; /* Tamaño de texto por defecto */
+  font-weight: 400;
+  color: #b4b4b4;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-.text-overlay-piel-p{
-    color: #b4b4b4;
-    font-size: 25px;
-
+.text-overlay-piel-p {
+  font-size: 25px; /* Tamaño de texto por defecto para el párrafo */
 }
 
 .btn-ver-mas-piel{
     color: #9b9b9b;
 }
+/* Para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .text-overlay {
+      font-size: 30px; /* Ajusta el tamaño del texto en tablets */
+  }
+  .text-overlay-piel-p {
+    font-size: 20px; /* Ajusta el tamaño del texto del párrafo en tablets */
+}
+}
 
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .text-overlay {
+      font-size: 22px; /* Ajusta el tamaño del texto en móviles */
+      line-height: 1.1; /* Ajusta el espaciado entre líneas en pantallas pequeñas */
+  }
+
+  .btn-ver-mas {
+      font-size: 18px; /* Reduce el tamaño del botón en móviles */
+      padding: 8px 0; /* Ajusta el espaciado del botón */
+  }
+
+  .text-and-button {
+      width: 80%; /* Asegura que el contenedor del texto sea más pequeño en móviles */
+      padding-left: 10px; /* Ajusta el padding en móviles */
+      left: 10px; /* Alinea el contenedor al centro */
+  }
+}
+
+/* Para pantallas medianas (tablets) */
+@media (max-width: 480px) {
+  .text-overlay-piel {
+      font-size: 22px; /* Ajusta el tamaño del texto en móviles */
+      line-height: 1.1;
+  }
+  
+  .text-overlay-piel-p {
+    font-size: 18px; /* Ajusta el tamaño del texto del párrafo en móviles */
+  }
+  .btn-ver-mas-piel {
+    font-size: 18px;
+    padding: 8px 0;
+}
+.btn-ver-mas-piel::before,
+    .btn-ver-mas-piel::after {
+        left: -10px;  /* Reduce el tamaño de las líneas */
+        right: -10px;
+    }
+
+.text-and-button-piel {
+  width: 80%; /* Reduce el ancho del contenedor en móviles */
+  padding-right: 5px; /* Ajusta el padding en móviles */
+  right: 10px; /* Mueve el contenedor hacia la derecha */
+  text-align: right; /* Alinea el texto a la derecha */
+}
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .text-overlay-piel {
+      font-size: 15px; /* Ajusta el tamaño del texto en móviles */
+      line-height: 1.1; /* Ajusta el espaciado entre líneas en pantallas pequeñas */
+  }
+
+  .text-overlay-piel-p {
+      font-size: 12px; /* Ajusta el tamaño del texto del párrafo en móviles */
+  }
+
+  .btn-ver-mas-piel {
+      font-size: 18px; /* Reduce el tamaño del botón en móviles */
+      padding: 5px 0; /* Ajusta el espaciado del botón */
+  }
+
+  .text-and-button-piel {
+    width: 80%; /* Asegura que el contenedor del texto sea más pequeño en móviles */
+      padding-right: 10px; /* Ajusta el padding en móviles */
+      margin: 0 auto;
+      text-align: center;
+  }
+}
   

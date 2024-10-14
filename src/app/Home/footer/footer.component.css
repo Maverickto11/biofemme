@@ -1,18 +1,19 @@
 
 .contacto {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantiene los enlaces en los extremos */
     align-items: center;
     background-color: #B16B78;
     color: white;
-    padding: 10px 20px; /* Ajustar el espaciado para pantallas más pequeñas */
+    padding: 10px 20px; /* Espaciado */
     width: 100%;
     box-sizing: border-box;
     bottom: 0;
 }
+
 .footer-left, .footer-right {
     flex: 1; /* Hace que ambas secciones ocupen el mismo espacio */
-    text-align: center;
+    text-align: center; /* Alinea el texto al centro */
 }
 
 .footer-link {
@@ -26,6 +27,32 @@
     text-decoration: underline; /* Subrayado al pasar el cursor */
 }
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 480px) {
+    .contacto {
+        justify-content: space-between; /* Mantiene los enlaces en los extremos */
+        padding: 15px 10px; /* Espaciado para móviles */
+    }
+
+    .footer-left, .footer-right {
+        flex-basis: 50%; /* Hace que ambas secciones ocupen el 50% del ancho */
+        text-align: center; /* Alinea el texto al centro */
+    }
+
+    .footer-left {
+        text-align: left; /* Alinea el texto de la izquierda a la izquierda */
+    }
+
+    .footer-right {
+        text-align: right; /* Alinea el texto de la derecha a la derecha */
+    }
+
+    .footer-link {
+        font-size: 14px; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+}
+
+/*----------------------------------- CONTACTO -----------------------------------*/
 .img-footer {
     position: relative;
     background-image: url('/assets/img/Categorías/footer-bf-copia.jpg');
