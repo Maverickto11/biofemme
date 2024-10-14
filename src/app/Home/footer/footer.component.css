@@ -1,16 +1,15 @@
 
 .contacto {
     display: flex;
-    justify-content: space-between; /* Distribuye el contenido a los extremos */
-    align-items: center; /* Centra verticalmente */
-    background-color: #B16B78; /* Color de fondo */
-    color: white; /* Color del texto */
-    padding: 10px 50px; /* Espaciado interno (arriba-abajo 20px, izquierda-derecha 50px) */
-    width: 100%; /* Asegura que el footer abarque todo el ancho de la página */
-    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del footer */
-    bottom: 0; /* Ubica el footer en la parte inferior de la página */
+    justify-content: space-between;
+    align-items: center;
+    background-color: #B16B78;
+    color: white;
+    padding: 10px 20px; /* Ajustar el espaciado para pantallas más pequeñas */
+    width: 100%;
+    box-sizing: border-box;
+    bottom: 0;
 }
-
 .footer-left, .footer-right {
     flex: 1; /* Hace que ambas secciones ocupen el mismo espacio */
     text-align: center;
@@ -38,6 +37,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row; /* Mantiene los elementos en una fila */
+    max-width: 100%; /* Asegura que la imagen no se desborde */
 }
 
 .img-footer::before {
@@ -84,6 +85,8 @@
     font-weight: bold;
     z-index: 2;
     margin-bottom: 50px;
+
+    width: 100%; /* Asegura que los elementos no se extiendan más allá de su contenedor */
 }
 
 .text-der-compra {
@@ -146,3 +149,71 @@
     background-color: #25D366;
     color: white;
   }
+
+  @media (max-width: 640px) {
+    .contacto {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: flex-start; /* Alinear elementos a la izquierda */
+        padding: 10px 10px; /* Reducir espaciado */
+    }
+
+    .footer-left, .footer-right {
+        text-align: left; /* Alinear texto a la izquierda en móviles */
+        margin-bottom: 10px; /* Espacio entre los enlaces */
+    }
+
+    .img-footer {
+        flex-direction: column; /* Cambiar a columna para la imagen y el texto en móviles */
+        align-items: center; /* Centrar elementos */
+        padding: 10px; /* Espacio interno */
+    }
+
+    .logo-texto-izq {
+        margin-left: 0; /* Eliminar margen izquierdo en móviles */
+        margin-bottom: 10px; /* Espacio inferior para separar */
+    }
+
+    .text-der, .text-der-compra {
+        text-align: center; /* Centrar texto en móviles */
+        margin: 10px 0; /* Espacio vertical entre secciones */
+    }
+
+    .text-der a {
+        display: block; /* Cambiar a bloque para enlaces en móviles */
+        margin-right: 0; /* Eliminar margen a la derecha */
+        margin-top: 5px; /* Espacio superior entre enlaces */
+    }
+
+    .paymentez {
+        width: 150px; /* Ajustar el ancho de la imagen de Paymentez */
+    }
+
+    .copyright {
+        text-align: center; /* Centrar copyright en móviles */
+        margin: 10px 0; /* Espacio vertical */
+    }
+
+    .copy {
+        font-size: 12px; /* Ajustar tamaño de fuente */
+    }
+    .custom-link {
+        font-size: 0.8rem; /* Tamaño de letra pequeño */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .text-tienda-online, .text-compra-segura {
+        font-size: 16px; /* Ajustar tamaño de fuente */
+    }
+
+    .text-giofemme {
+        font-size: 12px; /* Reducir tamaño de texto para mejor legibilidad */
+        line-height: 16px; /* Ajustar altura de línea */
+    }
+}
+@media (min-width: 641px) {
+    .custom-link {
+        font-size: 1rem; /* Tamaño de letra normal para pantallas más grandes */
+    }
+}
